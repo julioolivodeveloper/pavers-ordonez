@@ -66,6 +66,14 @@ a{text-decoration:none}
 @keyframes fid{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 .hero h1{font-size:clamp(2.8rem,6vw,5rem);color:#fff;margin-bottom:20px;animation:fid .8s ease .35s both;max-width:750px}
 .hero h1 span{color:var(--terra)}
+.typed-wrap{display:inline-block;min-height:1.15em}
+.typed-text{color:var(--terra);transition:color .3s}
+.typed-text.green{color:#5DBF72}
+.typed-cursor{display:inline-block;width:3px;background:var(--terra);margin-left:3px;animation:blink .75s step-end infinite;vertical-align:baseline;height:.9em;border-radius:1px}
+.typed-cursor.green{background:#5DBF72}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.btn-green{background:#2E7D44;color:#fff}
+.btn-green:hover{background:#3A9A55;transform:translateY(-2px);box-shadow:0 8px 25px rgba(46,125,68,.45)}
 .hero-sub{font-size:1.15rem;color:rgba(255,255,255,.8);max-width:580px;margin-bottom:36px;animation:fid .8s ease .5s both}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fid .8s ease .65s both}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:4px;font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none}
@@ -282,11 +290,12 @@ footer{background:#0D1520;padding:40px 30px 28px}
   <div class="hero-ov"></div>
   <div class="hero-c">
     <div class="hero-badge"><i class="fas fa-star"></i> Serving Palm Beach County, FL</div>
-    <h1>Expert Paver<br><span>Installation & Repair</span></h1>
+    <h1>Expert Paver<br><span class="typed-wrap"><span class="typed-text" id="typedText"></span><span class="typed-cursor" id="typedCursor"></span></span></h1>
     <p class="hero-sub">Transforming driveways, patios, and walkways across West Palm Beach. Premium pavers. Flawless craftsmanship. Built to last.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
       <a href="tel:5619701917" class="btn btn-outline"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+      <a href="landscaping.html" class="btn btn-green" id="landscapingBtn" style="display:none"><i class="fas fa-leaf"></i> Landscaping</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">10+</div><div class="lbl">Years Experience</div></div>
@@ -689,6 +698,50 @@ document.getElementById('burger').addEventListener('click',function(){
 });
 
 // Form submission → WhatsApp redirect
+// Typewriter effect
+(function(){
+  var phrases=[
+    {text:'Installation & Repair', green:false},
+    {text:'Driveway Pavers',       green:false},
+    {text:'Patio & Outdoor Living',green:false},
+    {text:'Walkways & Paths',      green:false},
+    {text:'Landscaping',           green:true}
+  ];
+  var el=document.getElementById('typedText');
+  var cur=document.getElementById('typedCursor');
+  var lBtn=document.getElementById('landscapingBtn');
+  var idx=0,charIdx=0,deleting=false,pauseTick=0;
+  var PAUSE=52,TYPE_SPD=68,DEL_SPD=38;
+
+  function setGreen(on){
+    el.classList.toggle('green',on);
+    cur.classList.toggle('green',on);
+    if(lBtn) lBtn.style.display=on?'inline-flex':'none';
+  }
+
+  function tick(){
+    var phrase=phrases[idx];
+    if(pauseTick>0){pauseTick--;setTimeout(tick,TYPE_SPD);return;}
+    if(!deleting){
+      el.textContent=phrase.text.slice(0,charIdx+1);
+      charIdx++;
+      if(charIdx===phrase.text.length){pauseTick=PAUSE;deleting=true;setTimeout(tick,TYPE_SPD);return;}
+    } else {
+      el.textContent=phrase.text.slice(0,charIdx-1);
+      charIdx--;
+      if(charIdx===0){
+        deleting=false;
+        idx=(idx+1)%phrases.length;
+        setGreen(phrases[idx].green);
+        pauseTick=12;
+      }
+    }
+    setTimeout(tick,deleting?DEL_SPD:TYPE_SPD);
+  }
+  setGreen(phrases[0].green);
+  setTimeout(tick,600);
+})();
+
 function handleForm(e){
   e.preventDefault();
   const f=e.target;
