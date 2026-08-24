@@ -77,9 +77,9 @@
   font-family:'Oswald',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:.8px;text-transform:uppercase;
   text-decoration:none;transition:all .2s;cursor:pointer;border:none;width:100%;
 }
-.cb-contact-btn.whatsapp{background:#25D366;color:#fff}
+.cb-contact-btn.whatsapp{background:#25D366;color:#fff!important}
 .cb-contact-btn.whatsapp:hover{background:#1ebe59}
-.cb-contact-btn.call{background:#1A2332;color:#fff}
+.cb-contact-btn.call{background:#1A2332;color:#fff!important}
 .cb-contact-btn.call:hover{background:#243040}
 .cb-contact-btn.link{background:#F0EDE8;color:#C85A2A;border:1px solid rgba(200,90,42,.2)}
 .cb-contact-btn.link:hover{background:#C85A2A;color:#fff}
