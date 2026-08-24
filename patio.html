@@ -49,13 +49,13 @@ a[href^="tel"]:not(.btn),a[href^="sms"]:not(.btn){color:inherit}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
 .burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
 .page-hero{position:relative;padding:140px 30px 80px;overflow:hidden;min-height:420px;display:flex;align-items:center}
-.page-hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.4);opacity:0;transition:opacity 1.5s ease}
+.page-hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.65);opacity:0;transition:opacity 1.5s ease}
 .page-hero-slide.active{opacity:1}
 .typed-wrap{display:inline-block;min-height:1.15em}
 .typed-text{color:var(--terra);transition:color .3s}
 .typed-cursor{display:inline-block;width:3px;background:var(--terra);margin-left:3px;animation:typedBlink .75s step-end infinite;vertical-align:baseline;height:.9em;border-radius:1px}
 @keyframes typedBlink{0%,100%{opacity:1}50%{opacity:0}}
-.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.95) 0%,rgba(200,90,42,.2) 100%)}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,0.72) 0%,rgba(200,90,42,.2) 100%)}
 .page-hero-c{position:relative;max-width:1200px;margin:0 auto;width:100%}
 .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:var(--tr)}.breadcrumb a:hover{color:var(--terra)}
@@ -90,7 +90,7 @@ a[href^="tel"]:not(.btn),a[href^="sms"]:not(.btn){color:inherit}
 .space-card{border-radius:12px;overflow:hidden;position:relative;height:300px;cursor:pointer}
 .space-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .space-card:hover img{transform:scale(1.06)}
-.space-card-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,35,50,.85) 0%,rgba(26,35,50,.1) 60%)}
+.space-card-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,35,50,0.72) 0%,rgba(26,35,50,.1) 60%)}
 .space-card-body{position:absolute;bottom:0;left:0;right:0;padding:24px}
 .space-card-body h3{font-size:1.2rem;color:#fff;margin-bottom:6px}
 .space-card-body p{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.6}

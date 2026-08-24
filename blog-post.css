@@ -28,8 +28,8 @@ a[href^="tel"]:not(.btn),a[href^="sms"]:not(.btn){color:inherit}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
 .burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
 .article-hero{position:relative;height:480px;display:flex;align-items:flex-end;overflow:hidden}
-.article-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.4)}
-.article-hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,35,50,.95) 0%,rgba(26,35,50,.3) 60%,transparent 100%)}
+.article-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(0.55)}
+.article-hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,35,50,0.72) 0%,rgba(26,35,50,.3) 60%,transparent 100%)}
 .article-hero-c{position:relative;max-width:1200px;margin:0 auto;padding:0 30px 48px;width:100%}
 .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:.78rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:var(--tr)}.breadcrumb a:hover{color:var(--terra)}.breadcrumb i{font-size:.6rem}
