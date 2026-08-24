@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Patio & outdoor living paver installation in Lake Worth & West Palm Beach, FL. Pool decks, outdoor kitchens, entertainment areas. Call Pavers Ordonez (561) 970-1917.">
+<title>Patio & Outdoor Living Pavers | Pavers Ordonez — Lake Worth, FL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#1A2332;--dark2:#243040;
+  --terra:#C85A2A;--terra-l:#E07040;
+  --amber:#F4A832;--amber-l:#F7BE62;
+  --white:#fff;--off:#FAF8F5;--stone:#F0EDE8;--gray:#6C757D;
+  --tr:all .3s ease;--sh:0 10px 40px rgba(0,0,0,.12);--sh2:0 20px 60px rgba(0,0,0,.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.15;letter-spacing:.5px}
+img{max-width:100%;display:block}a{text-decoration:none}
+.nav{position:fixed;top:0;width:100%;z-index:1000;background:var(--dark);padding:14px 0;box-shadow:0 5px 30px rgba(0,0,0,.3)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:42px;height:42px;background:var(--terra);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;flex-shrink:0}
+.logo-b{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;color:#fff;letter-spacing:1px;line-height:1;display:block}
+.logo-t{font-size:10px;color:var(--amber-l);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr)}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--terra)!important;color:#fff!important;padding:9px 20px;border-radius:4px}
+.nav-cta:hover{background:var(--terra-l)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
+.page-hero{position:relative;padding:140px 30px 80px;overflow:hidden;min-height:420px;display:flex;align-items:center}
+.page-hero-bg{position:absolute;inset:0;background:url('images/738593643_122133723075138249_4202044277146498242_n.jpg') center/cover no-repeat;filter:brightness(.25)}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.95) 0%,rgba(200,90,42,.2) 100%)}
+.page-hero-c{position:relative;max-width:1200px;margin:0 auto;width:100%}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:var(--tr)}.breadcrumb a:hover{color:var(--terra)}
+.breadcrumb i{font-size:.6rem}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,90,42,.15);border:1px solid var(--terra);color:var(--amber-l);padding:7px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;margin-bottom:16px;max-width:700px}
+.page-hero h1 span{color:var(--terra)}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:560px;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:4px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.4)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.sec{padding:80px 30px}
+.sec-in{max-width:1200px;margin:0 auto}
+.sec-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:block}
+.sec-title{font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--dark);margin-bottom:16px}
+.sec-title span{color:var(--terra)}
+.sec-sub{font-size:1rem;color:var(--gray);line-height:1.85}
+.overview{background:var(--off)}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ov-img{position:relative;border-radius:14px;overflow:hidden;height:460px}
+.ov-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ov-content .sec-sub{margin-bottom:28px}
+.check-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.check-item{display:flex;align-items:flex-start;gap:14px}
+.check-item i{color:var(--terra);font-size:1rem;margin-top:4px;flex-shrink:0}
+.check-item span{font-size:.95rem;color:#444;line-height:1.7}
+.spaces{background:#fff}
+.spaces-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:48px}
+.space-card{border-radius:12px;overflow:hidden;position:relative;height:300px;cursor:pointer}
+.space-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.space-card:hover img{transform:scale(1.06)}
+.space-card-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(26,35,50,.85) 0%,rgba(26,35,50,.1) 60%)}
+.space-card-body{position:absolute;bottom:0;left:0;right:0;padding:24px}
+.space-card-body h3{font-size:1.2rem;color:#fff;margin-bottom:6px}
+.space-card-body p{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.6}
+.space-card-ph{position:absolute;inset:0;background:linear-gradient(135deg,var(--stone),#DDD5CA);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.space-card-ph i{font-size:3rem;color:var(--terra);opacity:.4}
+.ben-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px;margin-top:50px}
+.ben-card{padding:32px 28px;border-radius:12px;background:var(--off);border-top:4px solid var(--terra);transition:var(--tr)}
+.ben-card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.ben-icon{width:52px;height:52px;background:rgba(200,90,42,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--terra);margin-bottom:18px}
+.ben-card h3{font-size:1.1rem;color:var(--dark);margin-bottom:10px}
+.ben-card p{font-size:.9rem;color:var(--gray);line-height:1.75}
+.gallery{background:var(--off)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal-item{border-radius:10px;overflow:hidden;height:240px;position:relative}
+.gal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-overlay{position:absolute;inset:0;background:rgba(200,90,42,0);transition:var(--tr)}
+.gal-item:hover .gal-overlay{background:rgba(200,90,42,.2)}
+.process{background:#fff}
+.proc-steps{display:flex;flex-direction:column;gap:0;margin-top:48px;max-width:760px}
+.proc-step{display:flex;gap:28px;align-items:flex-start;position:relative;padding-bottom:36px}
+.proc-step:last-child{padding-bottom:0}
+.proc-step::before{content:'';position:absolute;left:22px;top:50px;bottom:0;width:2px;background:linear-gradient(180deg,var(--terra),rgba(200,90,42,.1));z-index:0}
+.proc-step:last-child::before{display:none}
+.step-num{width:46px;height:46px;border-radius:50%;background:var(--terra);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;flex-shrink:0;z-index:1}
+.step-body h4{font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.step-body p{font-size:.92rem;color:var(--gray);line-height:1.75}
+.faq{background:var(--off)}
+.faq-list{display:flex;flex-direction:column;gap:16px;margin-top:48px;max-width:820px}
+.faq-item{background:#fff;border-radius:10px;border-left:4px solid var(--terra);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1.05rem;color:var(--dark);font-weight:600;gap:16px}
+.faq-q i{color:var(--terra);flex-shrink:0;transition:var(--tr)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 20px;font-size:.92rem;color:var(--gray);line-height:1.8}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-item.open .faq-a{max-height:200px}
+.cta-sec{background:linear-gradient(135deg,var(--terra) 0%,#9A3E18 100%);padding:70px 30px;text-align:center}
+.cta-sec h2{font-size:clamp(1.7rem,3.5vw,2.5rem);color:#fff;margin-bottom:14px}
+.cta-sec p{color:rgba(255,255,255,.85);font-size:1rem;max-width:500px;margin:0 auto 30px}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--terra)}
+.btn-white:hover{background:var(--off);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+footer{background:#0D1520;padding:36px 30px 24px}
+.footer-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.35);text-align:center}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);transition:var(--tr)}
+.footer-links a:hover{color:var(--terra)}
+.float-phone{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px;background:var(--terra);color:#fff;padding:13px 20px;border-radius:50px;box-shadow:0 8px 30px rgba(200,90,42,.5);font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;transition:var(--tr);animation:pulse 2.5s infinite}
+.float-phone:hover{background:var(--terra-l);transform:translateY(-3px)}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(200,90,42,.5)}50%{box-shadow:0 8px 40px rgba(200,90,42,.8)}}
+@media(max-width:900px){
+  .ov-grid{grid-template-columns:1fr}.ov-img{height:280px}
+  .gal-grid{grid-template-columns:1fr 1fr}.spaces-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:fixed;top:0;right:0;bottom:0;width:260px;background:var(--dark);flex-direction:column;align-items:flex-start;padding:90px 30px 40px;gap:8px;transform:translateX(100%);transition:transform .3s ease}
+  .nav-links.open{display:flex;transform:translateX(0)}
+  .nav-links li{width:100%}
+  .nav-links a{font-size:17px;padding:10px 0;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+  .burger{display:flex}
+}
+@media(max-width:600px){.sec{padding:56px 20px}.gal-grid{grid-template-columns:1fr}.gal-item{height:200px}.footer-in{flex-direction:column;align-items:center;text-align:center}}
+</style>
+</head>
+<body>
+
+<a class="float-phone" href="tel:5619701917"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">Lake Worth, FL</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-ov"></div>
+  <div class="page-hero-c">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+      <a href="index.html#services">Services</a><i class="fas fa-chevron-right"></i>
+      <span style="color:var(--terra)">Patio & Outdoor Living</span>
+    </div>
+    <div class="page-badge"><i class="fas fa-umbrella-beach"></i> Patios</div>
+    <h1>Patio & <span>Outdoor Living</span> Pavers</h1>
+    <p>Transform your backyard into a beautiful outdoor retreat. Pool decks, entertainment areas, fire pit surrounds — designed and built to enjoy Florida living to the fullest.</p>
+    <div class="hero-btns">
+      <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-file-alt"></i> Get a Free Estimate</a>
+      <a href="tel:5619701917" class="btn btn-outline"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview sec">
+  <div class="sec-in">
+    <div class="ov-grid">
+      <div class="ov-img" data-aos="fade-right">
+        <img src="images/739045044_122105195247381595_1993292376948144656_n.jpg" alt="Patio Paver Installation West Palm Beach" onerror="this.src='images/739045044_122105195247381595_1993292376948144656_n.jpg'">
+        <img src="images/739295140_122105114577381595_7458997354262051135_n.jpg" alt="Patio Paver Installation">
+      </div>
+      <div data-aos="fade-left">
+        <span class="sec-label">Outdoor Living Experts</span>
+        <h2 class="sec-title">Your Backyard <span>Transformed</span></h2>
+        <p class="sec-sub">Florida's beautiful weather deserves a beautiful outdoor space. Whether you're dreaming of a pool deck, a dining patio, or a full outdoor kitchen area — paver hardscaping creates the foundation for a backyard you'll actually use and love.</p>
+        <div class="check-list">
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Pool deck specialists</strong> — slip-resistant, heat-reflective pavers designed for poolside safety and comfort.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Custom design</strong> — we create layouts that work with your existing landscaping and home architecture.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Naturally cool underfoot</strong> — travertine and lighter-colored pavers stay cooler than concrete in the Florida sun.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Adds usable square footage</strong> — a well-designed patio can extend your living space outdoors year-round.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Stain & weather resistant</strong> — sealed pavers handle Florida rain, sun, and humidity without deteriorating.</span></div>
+        </div>
+        <a href="index.html#contact" class="btn btn-primary"><i class="fas fa-file-alt"></i> Request a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPACES WE CREATE -->
+<section class="spaces sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Applications</span>
+      <h2 class="sec-title">Outdoor Spaces <span>We Create</span></h2>
+      <p class="sec-sub">From intimate garden corners to full resort-style backyards — we design and build every type of outdoor paver space.</p>
+    </div>
+    <div class="spaces-grid">
+      <div class="space-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="space-card-ph"><i class="fas fa-swimming-pool"></i></div>
+        <img src="images/739835983_122104745127381595_8070734409646212028_n.jpg" alt="Pool Deck Pavers" onerror="this.style.display='none'">
+        <div class="space-card-ov"></div>
+        <div class="space-card-body">
+          <h3>Pool Decks</h3>
+          <p>Safe, slip-resistant, and stunning. The perfect surround for any pool in Palm Beach County.</p>
+        </div>
+      </div>
+      <div class="space-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="space-card-ph"><i class="fas fa-utensils"></i></div>
+        <img src="images/739931391_122104728867381595_7367091108108208475_n.jpg" alt="Outdoor Kitchen Pavers" onerror="this.style.display='none'">
+        <div class="space-card-ov"></div>
+        <div class="space-card-body">
+          <h3>Outdoor Kitchens & Dining</h3>
+          <p>Create the ultimate entertaining space with a durable, easy-clean paver floor.</p>
+        </div>
+      </div>
+      <div class="space-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="space-card-ph"><i class="fas fa-fire"></i></div>
+        <img src="images/740030140_122104736913381595_8893087934959728683_n.jpg" alt="Fire Pit Paver Area" onerror="this.style.display='none'">
+        <div class="space-card-ov"></div>
+        <div class="space-card-body">
+          <h3>Fire Pit & Lounge Areas</h3>
+          <p>Design a cozy gathering spot with custom paver patterns that complement your fire feature.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits sec" style="background:var(--off)">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Why Pavers</span>
+      <h2 class="sec-title">Benefits of Paver <span>Patios</span></h2>
+    </div>
+    <div class="ben-grid">
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="ben-icon"><i class="fas fa-thermometer-half"></i></div>
+        <h3>Stays Cooler in the Sun</h3>
+        <p>Unlike dark concrete, lighter paver options like travertine reflect heat — making your outdoor space comfortable even on the hottest Florida days.</p>
+      </div>
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="ben-icon"><i class="fas fa-water"></i></div>
+        <h3>Slip-Resistant Surface</h3>
+        <p>Textured paver surfaces provide excellent grip when wet — essential for pool decks and areas exposed to Florida's frequent rain showers.</p>
+      </div>
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="ben-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+        <h3>No Cracking</h3>
+        <p>Interlocking pavers flex and move with the ground, eliminating the cracking and heaving that plagues poured concrete patios in Florida's shifting soil.</p>
+      </div>
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="ben-icon"><i class="fas fa-palette"></i></div>
+        <h3>Endless Design Options</h3>
+        <p>Combine colors, sizes, and patterns to create a truly custom outdoor space. Add borders, inlays, and focal points that make your patio unique.</p>
+      </div>
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="ben-icon"><i class="fas fa-home"></i></div>
+        <h3>Boosts Property Value</h3>
+        <p>A professionally designed paver patio is one of the highest-ROI outdoor improvements, adding real value and selling appeal to your home.</p>
+      </div>
+      <div class="ben-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="ben-icon"><i class="fas fa-broom"></i></div>
+        <h3>Easy to Maintain</h3>
+        <p>Sealed paver patios resist stains, mildew, and discoloration. Cleaning is as simple as hosing down or pressure washing when needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-title">Patio <span>Project Gallery</span></h2>
+    </div>
+    <div class="gal-grid" style="margin-top:40px">
+      <div class="gal-item" data-aos="fade-up">
+        <img src="images/740128675_122105238327381595_3256256444920625736_n.jpg" alt="Patio Paver Project">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="60">
+        <img src="images/740259718_122105197755381595_3756253496081007450_n.jpg" alt="Patio Paver Project">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="120">
+        <img src="images/740779585_122105196915381595_5573765595533482193_n.jpg" alt="Patio Paver Project">
+        <div class="gal-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process sec" style="background:var(--off)">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">How We Do It</span>
+      <h2 class="sec-title">Our <span>Patio Installation Process</span></h2>
+    </div>
+    <div class="proc-steps" data-aos="fade-up">
+      <div class="proc-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Design Consultation</h4>
+          <p>We visit your home, walk the backyard with you, discuss your vision, and take measurements. We'll suggest layouts, patterns, and materials that work with your space and budget.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Site Preparation & Grading</h4>
+          <p>We excavate to the correct depth, ensure proper drainage slopes (critical in Florida), and grade the area so water flows away from your home and pool area.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Base & Sand Installation</h4>
+          <p>A compacted crushed stone base is installed followed by a screeded sand layer — the foundation that keeps your patio flat, stable, and weed-resistant for years.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Paver Laying & Edge Restraints</h4>
+          <p>Pavers are placed in your chosen pattern, borders are installed, and all edges are secured with professional-grade edge restraints to prevent spreading.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Final Compaction, Jointing & Sealing</h4>
+          <p>We compact, fill joints with polymeric sand to inhibit weeds and insects, then apply sealer for color enhancement and long-term protection from Florida's elements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Common Questions</span>
+      <h2 class="sec-title">Patio Pavers <span>FAQ</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What type of paver is best for a pool deck in Florida? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Travertine is a top choice for Florida pool decks — it stays naturally cool, is slip-resistant, and won't fade or crack like concrete. We also install concrete and tumbled pavers for pool decks depending on your style and budget.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How long does patio installation take? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Most patio projects take 2–5 days depending on size and complexity. A large pool deck with multiple areas may take up to a week. We'll give you a precise timeline during your estimate.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need a permit for a paver patio in Palm Beach County? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Permit requirements vary by city and project size. We're familiar with local regulations and can advise you on what's needed for your specific project during the consultation.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Will my patio have drainage issues during heavy Florida rains? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Not when installed correctly. We grade all patio surfaces to slope away from your home and pool, and use joint patterns that allow for proper water flow. Permeable paver options are also available.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-sec">
+  <div class="sec-in" data-aos="fade-up">
+    <h2>Ready to Build Your Dream Outdoor Space?</h2>
+    <p>Get a free consultation and estimate from Palm Beach County's outdoor living paver experts.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn btn-white"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
+      <a href="tel:5619701917" class="btn btn-outline-white"><i class="fas fa-phone-alt"></i> Call (561) 970-1917</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon" style="width:34px;height:34px;font-size:15px"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">Lake Worth, FL</span></div>
+    </a>
+    <p class="footer-copy">&copy; 2025 Pavers Ordonez. All rights reserved. | Palm Beach County, FL</p>
+    <div class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:5619701917">(561) 970-1917</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,offset:60});
+function toggleNav(){const l=document.getElementById('navLinks');l.classList.toggle('open');}
+function toggleFaq(el){const item=el.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');}
+</script>
+</body>
+</html>
