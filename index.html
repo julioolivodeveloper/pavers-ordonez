@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pavers Ordonez — Professional paver installation, repair, driveways, patios, and walkways in Lake Worth & West Palm Beach, FL. Licensed & insured. Call (561) 970-1917.">
+<title>Pavers Ordonez | Lake Worth & West Palm Beach, FL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#1A2332;--dark2:#243040;
+  --terra:#C85A2A;--terra-l:#E07040;
+  --amber:#F4A832;--amber-l:#F7BE62;
+  --white:#fff;--off:#FAF8F5;--stone:#F0EDE8;--gray:#6C757D;
+  --tr:all .3s ease;
+  --sh:0 10px 40px rgba(0,0,0,.12);--sh2:0 20px 60px rgba(0,0,0,.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.15;letter-spacing:.5px}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+
+/* NAV */
+.nav{position:fixed;top:0;width:100%;z-index:1000;padding:20px 0;transition:var(--tr)}
+.nav.s{background:var(--dark);padding:12px 0;box-shadow:0 5px 30px rgba(0,0,0,.3)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:46px;height:46px;background:var(--terra);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;flex-shrink:0}
+.logo-b{font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;color:#fff;letter-spacing:1px;line-height:1;display:block}
+.logo-t{font-size:10px;color:var(--amber-l);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.85);font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--terra);transition:var(--tr)}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--terra)!important;color:#fff!important;padding:10px 22px;border-radius:4px}
+.nav-cta::after{display:none!important}.nav-cta:hover{background:var(--terra-l)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001}
+.burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('images/hero.jpg') center/cover no-repeat;filter:brightness(.28);animation:zOut 15s ease-out forwards}
+.hero-bg-fallback{position:absolute;inset:0;background:linear-gradient(135deg,#1A2332 0%,#2C3E50 50%,#3D2B1F 100%)}
+@keyframes zOut{from{transform:scale(1.06)}to{transform:scale(1)}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.92) 0%,rgba(36,48,64,.65) 55%,rgba(200,90,42,.18) 100%)}
+.hero-c{position:relative;max-width:1200px;margin:0 auto;padding:120px 30px 80px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,90,42,.15);border:1px solid var(--terra);color:var(--amber-l);padding:8px 18px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;animation:fid .8s ease .2s both}
+@keyframes fid{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);color:#fff;margin-bottom:20px;animation:fid .8s ease .35s both;max-width:750px}
+.hero h1 span{color:var(--terra)}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.8);max-width:580px;margin-bottom:36px;animation:fid .8s ease .5s both}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fid .8s ease .65s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:4px;font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none}
+.btn-primary{background:var(--terra);color:#fff}
+.btn-primary:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.4)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:50px;margin-top:60px;animation:fid .8s ease .8s both;flex-wrap:wrap}
+.hero-stat .num{font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;color:var(--terra);line-height:1}
+.hero-stat .lbl{font-size:.8rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+
+/* TRUST BAR */
+.trust{background:var(--dark2);padding:18px 30px}
+.trust-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.75);font-size:.88rem;font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
+.trust-item i{color:var(--terra);font-size:1rem}
+
+/* SECTION BASE */
+.sec{padding:90px 30px}
+.sec-in{max-width:1200px;margin:0 auto}
+.sec-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:12px;display:block}
+.sec-title{font-size:clamp(1.9rem,4vw,2.8rem);color:var(--dark);margin-bottom:18px}
+.sec-title span{color:var(--terra)}
+.sec-sub{font-size:1rem;color:var(--gray);max-width:580px;line-height:1.8}
+.sec-hd{margin-bottom:60px}
+
+/* SERVICES */
+.services{background:var(--off)}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.srv-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--sh);transition:var(--tr)}
+.srv-card:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.srv-img{height:200px;background:var(--stone);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.srv-img img{width:100%;height:100%;object-fit:cover}
+.srv-img-ph{display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:linear-gradient(135deg,var(--stone) 0%,#E8E0D5 100%)}
+.srv-img-ph i{font-size:3.5rem;color:var(--terra);opacity:.5}
+.srv-body{padding:28px}
+.srv-icon{width:48px;height:48px;background:rgba(200,90,42,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--terra);margin-bottom:16px}
+.srv-body h3{font-size:1.3rem;color:var(--dark);margin-bottom:10px}
+.srv-body p{font-size:.92rem;color:var(--gray);line-height:1.75}
+
+/* WHY US */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-img{position:relative;border-radius:16px;overflow:hidden;min-height:480px;background:linear-gradient(135deg,var(--stone) 0%,#DDD5CA 100%);display:flex;align-items:center;justify-content:center}
+.why-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.why-img-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;z-index:1}
+.why-img-ph i{font-size:5rem;color:var(--terra);opacity:.35}
+.why-badge{position:absolute;bottom:28px;right:28px;background:var(--dark);color:#fff;padding:18px 24px;border-radius:10px;text-align:center;z-index:2}
+.why-badge .big{font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:var(--terra);line-height:1}
+.why-badge .sm{font-size:.75rem;color:rgba(255,255,255,.7);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+.why-list{display:flex;flex-direction:column;gap:22px;margin-top:36px}
+.why-item{display:flex;gap:18px;align-items:flex-start}
+.why-item-icon{width:46px;height:46px;border-radius:10px;background:rgba(200,90,42,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--terra);flex-shrink:0;margin-top:2px}
+.why-item h4{font-size:1.05rem;color:var(--dark);margin-bottom:5px}
+.why-item p{font-size:.9rem;color:var(--gray);line-height:1.7}
+
+/* PROCESS */
+.process{background:var(--dark);padding:90px 30px}
+.process .sec-title{color:#fff}
+.process .sec-sub{color:rgba(255,255,255,.65)}
+.proc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;position:relative}
+.proc-grid::before{content:'';position:absolute;top:35px;left:15%;right:15%;height:2px;background:linear-gradient(90deg,var(--terra),var(--amber),var(--terra));opacity:.3}
+.proc-card{text-align:center;padding:0 20px;position:relative;z-index:1}
+.proc-num{width:70px;height:70px;border-radius:50%;border:2px solid var(--terra);background:var(--dark);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.6rem;font-weight:700;color:var(--terra);margin:0 auto 24px}
+.proc-card h3{font-size:1.2rem;color:#fff;margin-bottom:10px}
+.proc-card p{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.7}
+
+/* GALLERY */
+.gallery{background:var(--off)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,220px);gap:16px}
+.gal-item{border-radius:10px;overflow:hidden;background:var(--stone);display:flex;align-items:center;justify-content:center;position:relative}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-item.large{grid-column:span 2;grid-row:span 2}
+.gal-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gray);font-size:.8rem;letter-spacing:1px;text-transform:uppercase}
+.gal-ph i{font-size:2rem;opacity:.4}
+.gal-overlay{position:absolute;inset:0;background:rgba(200,90,42,0);display:flex;align-items:center;justify-content:center;transition:var(--tr);opacity:0}
+.gal-item:hover .gal-overlay{background:rgba(200,90,42,.25);opacity:1}
+
+/* TESTIMONIALS */
+.testimonials{background:#fff}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.test-card{background:var(--off);border-radius:12px;padding:32px;border-left:4px solid var(--terra);position:relative}
+.test-card::before{content:'\201C';font-family:Georgia,serif;font-size:5rem;color:var(--terra);opacity:.15;position:absolute;top:10px;left:20px;line-height:1}
+.stars{display:flex;gap:4px;margin-bottom:16px}
+.stars i{color:var(--amber);font-size:.9rem}
+.test-card p{font-size:.95rem;color:#444;line-height:1.8;font-style:italic;position:relative;z-index:1}
+.test-author{display:flex;align-items:center;gap:14px;margin-top:24px}
+.test-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--terra),var(--amber));display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.1rem;color:#fff;font-weight:700;flex-shrink:0}
+.test-name{font-family:'Oswald',sans-serif;font-size:1rem;color:var(--dark);font-weight:600}
+.test-loc{font-size:.8rem;color:var(--gray)}
+
+/* CTA */
+.cta-sec{background:linear-gradient(135deg,var(--terra) 0%,#9A3E18 100%);padding:80px 30px;text-align:center}
+.cta-sec h2{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;margin-bottom:16px}
+.cta-sec p{color:rgba(255,255,255,.85);font-size:1.05rem;max-width:540px;margin:0 auto 36px}
+.cta-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--terra)}
+.btn-white:hover{background:var(--off);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+/* CONTACT */
+.contact{background:var(--dark);padding:90px 30px}
+.contact .sec-title{color:#fff}
+.contact .sec-sub{color:rgba(255,255,255,.6)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:28px}
+.c-item{display:flex;gap:18px;align-items:flex-start}
+.c-icon{width:50px;height:50px;border-radius:10px;background:rgba(200,90,42,.15);border:1px solid rgba(200,90,42,.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--terra);flex-shrink:0}
+.c-label{font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:4px}
+.c-val{font-family:'Oswald',sans-serif;font-size:1.15rem;color:#fff}
+.c-val a{color:var(--terra-l);transition:var(--tr)}
+.c-val a:hover{color:var(--amber-l)}
+.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:36px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px}
+.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:13px 16px;color:#fff;font-family:'Open Sans',sans-serif;font-size:.95rem;outline:none;transition:var(--tr)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--terra);background:rgba(200,90,42,.06)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-group select option{background:var(--dark);color:#fff}
+.btn-submit{width:100%;padding:16px;background:var(--terra);color:#fff;border:none;border-radius:6px;font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
+.btn-submit:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.35)}
+
+/* FOOTER */
+footer{background:#0D1520;padding:40px 30px 28px}
+.footer-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo .logo-b{font-size:16px}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.35);text-align:center}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);transition:var(--tr)}
+.footer-links a:hover{color:var(--terra)}
+
+/* FLOAT PHONE */
+.float-phone{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px;background:var(--terra);color:#fff;padding:14px 22px;border-radius:50px;box-shadow:0 8px 30px rgba(200,90,42,.5);font-family:'Oswald',sans-serif;font-size:15px;letter-spacing:1px;transition:var(--tr);animation:pulse 2.5s infinite}
+.float-phone:hover{background:var(--terra-l);transform:translateY(-3px);box-shadow:0 12px 40px rgba(200,90,42,.6)}
+.float-phone i{font-size:1.1rem}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(200,90,42,.5)}50%{box-shadow:0 8px 40px rgba(200,90,42,.8)}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{display:none;position:fixed;top:0;right:0;bottom:0;width:280px;background:var(--dark);flex-direction:column;align-items:flex-start;padding:90px 36px 40px;gap:8px;box-shadow:-10px 0 40px rgba(0,0,0,.4);transition:transform .3s ease;transform:translateX(100%)}
+  .nav-links.open{display:flex;transform:translateX(0)}
+  .nav-links li{width:100%}
+  .nav-links a{font-size:18px;padding:10px 0;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+  .nav-cta{margin-top:16px;text-align:center}
+  .burger{display:flex}
+  .why-grid,.contact-grid{grid-template-columns:1fr}
+  .why-img{min-height:320px}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item.large{grid-column:span 2;grid-row:span 1;height:200px}
+  .gal-item{height:160px}
+  .proc-grid::before{display:none}
+  .form-row{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .sec{padding:60px 20px}
+  .hero-stats{gap:28px}
+  .trust-in{gap:20px}
+  .gal-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gal-item.large{grid-column:span 1;height:200px}
+  .gal-item{height:180px}
+  .footer-in{flex-direction:column;align-items:center;text-align:center}
+  .float-phone{right:16px;bottom:16px;padding:12px 18px;font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOAT PHONE -->
+<a class="float-phone" href="tel:5619701917"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#" class="logo">
+      <div class="logo-icon"><i class="fas fa-th"></i></div>
+      <div>
+        <span class="logo-b">PAVERS ORDONEZ</span>
+        <span class="logo-t">Lake Worth, FL</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-fallback"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <div class="hero-badge"><i class="fas fa-star"></i> Serving Palm Beach County, FL</div>
+    <h1>Expert Paver<br><span>Installation & Repair</span></h1>
+    <p class="hero-sub">Transforming driveways, patios, and walkways across Lake Worth & West Palm Beach. Premium pavers. Flawless craftsmanship. Built to last.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
+      <a href="tel:5619701917" class="btn btn-outline"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">10+</div><div class="lbl">Years Experience</div></div>
+      <div class="hero-stat"><div class="num">500+</div><div class="lbl">Projects Completed</div></div>
+      <div class="hero-stat"><div class="num">100%</div><div class="lbl">Satisfaction Guaranteed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-in">
+    <div class="trust-item"><i class="fas fa-shield-alt"></i> Licensed & Insured</div>
+    <div class="trust-item"><i class="fas fa-check-circle"></i> Free Estimates</div>
+    <div class="trust-item"><i class="fas fa-map-marker-alt"></i> Palm Beach County</div>
+    <div class="trust-item"><i class="fas fa-star"></i> 5-Star Rated</div>
+    <div class="trust-item"><i class="fas fa-phone-alt"></i> (561) 970-1917</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services sec" id="services">
+  <div class="sec-in">
+    <div class="sec-hd" data-aos="fade-up">
+      <span class="sec-label">What We Do</span>
+      <h2 class="sec-title">Our <span>Services</span></h2>
+      <p class="sec-sub">From new installations to repairs and restoration, we handle every paver project with precision and care.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-car"></i></div>
+          <img src="images/driveway.jpg" alt="Paver Driveway Installation" onerror="this.style.display='none'">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-car"></i></div>
+          <h3>Driveway Pavers</h3>
+          <p>Boost your home's curb appeal and value with a custom paver driveway. Durable, beautiful, and designed to handle Florida's weather year after year.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-umbrella-beach"></i></div>
+          <img src="images/patio.jpg" alt="Patio Pavers" onerror="this.style.display='none'">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-umbrella-beach"></i></div>
+          <h3>Patio & Outdoor Living</h3>
+          <p>Create your dream outdoor space with elegant patio pavers. Perfect for entertaining, relaxing, or pool surrounds — we bring your vision to life.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-walking"></i></div>
+          <img src="images/walkway.jpg" alt="Walkway Pavers" onerror="this.style.display='none'">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-walking"></i></div>
+          <h3>Walkways & Paths</h3>
+          <p>Guide guests to your door with a beautifully crafted paver walkway. Custom designs that complement your landscape and add lasting character.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-tools"></i></div>
+          <img src="images/repair.jpg" alt="Paver Repair" onerror="this.style.display='none'">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-tools"></i></div>
+          <h3>Paver Repair & Restoration</h3>
+          <p>Cracked, sunken, or stained pavers? We restore them to like-new condition — re-leveling, re-sanding, pressure washing, and sealing included.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why sec" id="why">
+  <div class="sec-in">
+    <div class="why-grid">
+      <div class="why-img" data-aos="fade-right">
+        <div class="why-img-ph">
+          <i class="fas fa-th"></i>
+        </div>
+        <img src="images/team.jpg" alt="Pavers Ordonez Team" onerror="this.style.display='none'">
+        <div class="why-badge">
+          <div class="big">10+</div>
+          <div class="sm">Years in Business</div>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="sec-label">Why Choose Us</span>
+        <h2 class="sec-title">The <span>Pavers Ordonez</span> Difference</h2>
+        <p class="sec-sub">We're not just contractors — we're craftsmen who take pride in every stone we place. Serving Palm Beach County families and businesses.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fas fa-medal"></i></div>
+            <div>
+              <h4>Expert Craftsmanship</h4>
+              <p>Every project is executed with precision by our experienced crew. We use only premium-grade materials built for Florida's heat, rain, and humidity.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fas fa-dollar-sign"></i></div>
+            <div>
+              <h4>Fair & Transparent Pricing</h4>
+              <p>No hidden fees, no surprises. We provide detailed written estimates before any work begins so you know exactly what you're paying for.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fas fa-calendar-check"></i></div>
+            <div>
+              <h4>On-Time, Every Time</h4>
+              <p>We respect your time and property. Projects are completed on schedule and your space is left clean and ready to enjoy.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-item-icon"><i class="fas fa-thumbs-up"></i></div>
+            <div>
+              <h4>100% Satisfaction Guaranteed</h4>
+              <p>We don't consider a job done until you're completely happy. Your satisfaction is our reputation, and we protect it on every single project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="sec-in">
+    <div class="sec-hd" data-aos="fade-up" style="text-align:center">
+      <span class="sec-label">How It Works</span>
+      <h2 class="sec-title" style="color:#fff">Simple <span>3-Step Process</span></h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,.65);margin:0 auto">Getting your dream paver project started is easier than you think.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="proc-num">1</div>
+        <h3>Free Consultation</h3>
+        <p>Call us or fill out our form. We'll visit your property, assess the area, and understand exactly what you want to achieve.</p>
+      </div>
+      <div class="proc-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="proc-num">2</div>
+        <h3>Custom Quote</h3>
+        <p>We provide a detailed written estimate with material options, design ideas, and a clear timeline — all at no cost to you.</p>
+      </div>
+      <div class="proc-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="proc-num">3</div>
+        <h3>Flawless Installation</h3>
+        <p>Our crew gets to work on schedule. We complete the project cleanly and efficiently, then walk you through the finished result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery sec" id="gallery">
+  <div class="sec-in">
+    <div class="sec-hd" data-aos="fade-up">
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-title">Project <span>Gallery</span></h2>
+      <p class="sec-sub">A look at some of our completed paver projects across Palm Beach County.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-item large" data-aos="fade-up">
+        <div class="gal-ph"><i class="fas fa-camera"></i><span>Photo Coming Soon</span></div>
+        <img src="images/gallery1.jpg" alt="Paver Project" onerror="this.style.display='none'">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="80">
+        <div class="gal-ph"><i class="fas fa-camera"></i></div>
+        <img src="images/gallery2.jpg" alt="Paver Project" onerror="this.style.display='none'">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="120">
+        <div class="gal-ph"><i class="fas fa-camera"></i></div>
+        <img src="images/gallery3.jpg" alt="Paver Project" onerror="this.style.display='none'">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="160">
+        <div class="gal-ph"><i class="fas fa-camera"></i></div>
+        <img src="images/gallery4.jpg" alt="Paver Project" onerror="this.style.display='none'">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="gal-ph"><i class="fas fa-camera"></i></div>
+        <img src="images/gallery5.jpg" alt="Paver Project" onerror="this.style.display='none'">
+        <div class="gal-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials sec" id="testimonials">
+  <div class="sec-in">
+    <div class="sec-hd" data-aos="fade-up">
+      <span class="sec-label">Customer Reviews</span>
+      <h2 class="sec-title">What Our <span>Clients Say</span></h2>
+      <p class="sec-sub">Hundreds of satisfied homeowners and businesses trust Pavers Ordonez across Palm Beach County.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Pavers Ordonez completely transformed our driveway. The crew was professional, clean, and finished ahead of schedule. We've gotten so many compliments from the neighbors!"</p>
+        <div class="test-author">
+          <div class="test-avatar">M</div>
+          <div>
+            <div class="test-name">Maria G.</div>
+            <div class="test-loc">Lake Worth, FL</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Had them repair and reseal my patio pavers that had been sinking and cracking. They did an incredible job at a fair price. Looks brand new! Highly recommend."</p>
+        <div class="test-author">
+          <div class="test-avatar">R</div>
+          <div>
+            <div class="test-name">Robert T.</div>
+            <div class="test-loc">West Palm Beach, FL</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"From the first call to the final walkthrough, everything was smooth and professional. Our new pool deck pavers are exactly what we wanted. Worth every penny."</p>
+        <div class="test-author">
+          <div class="test-avatar">J</div>
+          <div>
+            <div class="test-name">Jennifer L.</div>
+            <div class="test-loc">Wellington, FL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-sec">
+  <div class="sec-in" data-aos="fade-up">
+    <h2>Ready to Transform Your Property?</h2>
+    <p>Get a free, no-obligation estimate from Palm Beach County's trusted paver experts. We respond within 24 hours.</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn btn-white"><i class="fas fa-file-alt"></i> Request a Free Quote</a>
+      <a href="tel:5619701917" class="btn btn-outline-white"><i class="fas fa-phone-alt"></i> Call (561) 970-1917</a>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Get In Touch</span>
+      <h2 class="sec-title">Request a <span>Free Quote</span></h2>
+      <p class="sec-sub">Fill out the form or call us directly. We'll get back to you within 24 hours with a detailed estimate.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+          <div>
+            <div class="c-label">Phone</div>
+            <div class="c-val"><a href="tel:5619701917">(561) 970-1917</a></div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fab fa-facebook"></i></div>
+          <div>
+            <div class="c-label">Facebook</div>
+            <div class="c-val"><a href="https://www.facebook.com/profile.php?id=61591447870453" target="_blank" rel="noopener">Pavers Ordonez</a></div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="c-label">Service Area</div>
+            <div class="c-val">Lake Worth &amp; West Palm Beach, FL</div>
+          </div>
+        </div>
+        <div class="c-item">
+          <div class="c-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="c-label">Hours</div>
+            <div class="c-val">Mon–Sat: 7:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" data-aos="fade-left" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(561) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select required>
+            <option value="" disabled selected>Select a service...</option>
+            <option>Driveway Pavers</option>
+            <option>Patio Pavers</option>
+            <option>Walkway / Path</option>
+            <option>Paver Repair & Restoration</option>
+            <option>Pool Deck Pavers</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Project Details</label>
+          <textarea placeholder="Describe your project, approximate size, and any specific requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> &nbsp;Send My Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-in">
+    <a href="#" class="logo footer-logo">
+      <div class="logo-icon" style="width:36px;height:36px;font-size:16px"><i class="fas fa-th"></i></div>
+      <div>
+        <span class="logo-b">PAVERS ORDONEZ</span>
+        <span class="logo-t">Lake Worth, FL</span>
+      </div>
+    </a>
+    <p class="footer-copy">&copy; 2025 Pavers Ordonez. All rights reserved. | Palm Beach County, FL</p>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:5619701917">(561) 970-1917</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,offset:60});
+
+// Nav scroll
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('s',window.scrollY>60));
+
+// Mobile nav
+function toggleNav(){
+  const links=document.getElementById('navLinks');
+  const burger=document.getElementById('burger');
+  links.classList.toggle('open');
+  burger.classList.toggle('open');
+}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('burger').classList.remove('open');
+}));
+
+// Burger animation
+document.getElementById('burger').addEventListener('click',function(){
+  const spans=this.querySelectorAll('span');
+  if(this.classList.contains('open')){
+    spans[0].style.transform='rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity='0';
+    spans[2].style.transform='rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans.forEach(s=>{s.style.transform='';s.style.opacity='1';});
+  }
+});
+
+// Form submission → WhatsApp redirect
+function handleForm(e){
+  e.preventDefault();
+  const f=e.target;
+  const fname=f.querySelector('input[placeholder="John"]').value;
+  const lname=f.querySelector('input[placeholder="Smith"]').value;
+  const phone=f.querySelector('input[type="tel"]').value;
+  const service=f.querySelector('select').value;
+  const details=f.querySelector('textarea').value;
+  const msg=`Hi Pavers Ordonez! I'd like a free quote.%0A%0AName: ${fname} ${lname}%0APhone: ${phone}%0AService: ${service}%0ADetails: ${details||'N/A'}`;
+  window.open(`https://wa.me/15619701917?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
