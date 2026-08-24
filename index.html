@@ -57,8 +57,9 @@ a{text-decoration:none}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('images/737645859_122104787787381595_8826169394889894895_n.jpg') center/cover no-repeat;filter:brightness(.28);animation:zOut 15s ease-out forwards}
 .hero-bg-fallback{position:absolute;inset:0;background:linear-gradient(135deg,#1A2332 0%,#2C3E50 50%,#3D2B1F 100%)}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.28);opacity:0;transition:opacity 1.5s ease}
+.hero-slide.active{opacity:1}
 @keyframes zOut{from{transform:scale(1.06)}to{transform:scale(1)}}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.92) 0%,rgba(36,48,64,.65) 55%,rgba(200,90,42,.18) 100%)}
 .hero-c{position:relative;max-width:1200px;margin:0 auto;padding:120px 30px 80px}
@@ -296,7 +297,11 @@ footer{background:#0D1520;padding:40px 30px 28px}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg-fallback"></div>
-  <div class="hero-bg"></div>
+  <div class="hero-slide active" style="background-image:url('images/737645859_122104787787381595_8826169394889894895_n.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/738877842_122105196243381595_8725008006093986929_n.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/739355702_122104726851381595_6501631938064703112_n.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/740779585_122105196915381595_5573765595533482193_n.jpg')"></div>
+  <div class="hero-slide" style="background-image:url('images/740259718_122105197755381595_3756253496081007450_n.jpg')"></div>
   <div class="hero-ov"></div>
   <div class="hero-c">
     <div class="hero-badge"><i class="fas fa-star"></i> Serving Palm Beach County, FL</div>
@@ -676,6 +681,7 @@ footer{background:#0D1520;padding:40px 30px 28px}
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init({duration:700,once:true,offset:60});
+(function(){var s=document.querySelectorAll('.hero-slide');if(s.length<2)return;var c=0;setInterval(function(){s[c].classList.remove('active');c=(c+1)%s.length;s[c].classList.add('active');},5000);})();
 
 // Nav scroll
 const nav=document.getElementById('nav');

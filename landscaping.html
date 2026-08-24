@@ -51,7 +51,12 @@ img{max-width:100%;display:block}a{text-decoration:none}
 
 /* PAGE HERO */
 .page-hero{position:relative;padding:140px 30px 80px;overflow:hidden;min-height:460px;display:flex;align-items:center}
-.page-hero-bg{position:absolute;inset:0;background:url('images/landscape1.jpg') center/cover no-repeat;filter:brightness(.28)}
+.page-hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.28);opacity:0;transition:opacity 1.5s ease}
+.page-hero-slide.active{opacity:1}
+.typed-wrap{display:inline-block;min-height:1.15em}
+.typed-text{color:#7DC98A;transition:color .3s}
+.typed-cursor{display:inline-block;width:3px;background:#7DC98A;margin-left:3px;animation:typedBlink .75s step-end infinite;vertical-align:baseline;height:.9em;border-radius:1px}
+@keyframes typedBlink{0%,100%{opacity:1}50%{opacity:0}}
 .page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.94) 0%,rgba(46,107,62,.25) 100%)}
 .page-hero-c{position:relative;max-width:1200px;margin:0 auto;width:100%}
 .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
@@ -222,7 +227,11 @@ footer{background:#0D1520;padding:36px 30px 24px}
 
 <!-- HERO -->
 <section class="page-hero">
-  <div class="page-hero-bg"></div>
+  <div class="page-hero-slide active" style="background-image:url('images/landscape1.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/landscape2.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/landscape3.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/landscape4.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/landscape5.jpg')"></div>
   <div class="page-hero-ov"></div>
   <div class="page-hero-c">
     <div class="breadcrumb">
@@ -231,7 +240,7 @@ footer{background:#0D1520;padding:36px 30px 24px}
       <span style="color:#7DC98A">Landscaping</span>
     </div>
     <div class="page-badge"><i class="fas fa-leaf"></i> Landscaping</div>
-    <h1>Professional <span>Landscaping</span> Services</h1>
+    <h1>Professional<br><span class="typed-wrap"><span class="typed-text" id="typedText"></span><span class="typed-cursor"></span></span></h1>
     <p>Complete outdoor transformations for West Palm Beach homes and businesses. Sod, plants, mulch, garden design, and full yard makeovers — we make your property beautiful from edge to edge.</p>
     <div class="hero-btns">
       <a href="index.html#contact" class="btn btn-green"><i class="fas fa-file-alt"></i> Get a Free Estimate</a>
@@ -554,6 +563,8 @@ footer{background:#0D1520;padding:36px 30px 24px}
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init({duration:700,once:true,offset:60});
+(function(){var s=document.querySelectorAll('.page-hero-slide');if(s.length<2)return;var c=0;setInterval(function(){s[c].classList.remove('active');c=(c+1)%s.length;s[c].classList.add('active');},5000);})();
+(function(){var phrases=['Landscaping Services','Sod Installation','Full Yard Makeovers','Rock & Garden Design'];var el=document.getElementById('typedText');var idx=0,charIdx=0,deleting=false,pauseTick=0;var PAUSE=52,TYPE_SPD=68,DEL_SPD=38;function tick(){var phrase=phrases[idx];if(pauseTick>0){pauseTick--;setTimeout(tick,TYPE_SPD);return;}if(!deleting){el.textContent=phrase.slice(0,charIdx+1);charIdx++;if(charIdx===phrase.length){pauseTick=PAUSE;deleting=true;setTimeout(tick,TYPE_SPD);return;}}else{el.textContent=phrase.slice(0,charIdx-1);charIdx--;if(charIdx===0){deleting=false;idx=(idx+1)%phrases.length;pauseTick=12;}}setTimeout(tick,deleting?DEL_SPD:TYPE_SPD);}setTimeout(tick,600);})();
 // Mobile dropdown
 document.querySelectorAll(".nav-dropdown>a").forEach(function(a){a.addEventListener("click",function(e){var isMobile=window.innerWidth<=900;if(isMobile){e.preventDefault();var menu=this.nextElementSibling;var open=menu.style.opacity==="1";document.querySelectorAll(".dropdown-menu").forEach(function(m){m.style.opacity="0";m.style.visibility="hidden"});if(!open){menu.style.opacity="1";menu.style.visibility="visible";menu.style.top="calc(100% + 10px)"}}})});
 function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
