@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional landscaping services in West Palm Beach, FL. Garden design, sod installation, mulching, planting, and full yard makeovers. Call Pavers Ordonez (561) 970-1917.">
+<title>Landscaping Services | Pavers Ordonez — West Palm Beach, FL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#1A2332;--dark2:#243040;
+  --terra:#C85A2A;--terra-l:#E07040;
+  --green:#2E6B3E;--green-l:#3D8A52;
+  --amber:#F4A832;--amber-l:#F7BE62;
+  --white:#fff;--off:#F5FAF6;--stone:#EDF2EE;--gray:#6C757D;
+  --tr:all .3s ease;--sh:0 10px 40px rgba(0,0,0,.12);--sh2:0 20px 60px rgba(0,0,0,.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.15;letter-spacing:.5px}
+img{max-width:100%;display:block}a{text-decoration:none}
+
+.nav{position:fixed;top:0;width:100%;z-index:1000;background:var(--dark);padding:14px 0;box-shadow:0 5px 30px rgba(0,0,0,.3)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:42px;height:42px;background:var(--terra);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;flex-shrink:0}
+.logo-b{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;color:#fff;letter-spacing:1px;line-height:1;display:block}
+.logo-t{font-size:10px;color:var(--amber-l);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr)}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--terra)!important;color:#fff!important;padding:9px 18px;border-radius:4px}
+.nav-cta:hover{background:var(--terra-l)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
+
+/* PAGE HERO */
+.page-hero{position:relative;padding:140px 30px 80px;overflow:hidden;min-height:460px;display:flex;align-items:center}
+.page-hero-bg{position:absolute;inset:0;background:url('images/landscape1.jpg') center/cover no-repeat;filter:brightness(.28)}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.94) 0%,rgba(46,107,62,.25) 100%)}
+.page-hero-c{position:relative;max-width:1200px;margin:0 auto;width:100%}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:var(--tr)}.breadcrumb a:hover{color:var(--terra)}.breadcrumb i{font-size:.6rem}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,107,62,.2);border:1px solid var(--green-l);color:#7DC98A;padding:7px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);color:#fff;margin-bottom:16px;max-width:720px}
+.page-hero h1 span{color:#7DC98A}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.78);max-width:580px;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:4px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none}
+.btn-primary{background:var(--terra);color:#fff}.btn-primary:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.4)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(46,107,62,.4)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:44px;margin-top:48px;flex-wrap:wrap}
+.hero-stat .num{font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:#7DC98A;line-height:1}
+.hero-stat .lbl{font-size:.78rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+
+/* SECTIONS */
+.sec{padding:80px 30px}.sec-in{max-width:1200px;margin:0 auto}
+.sec-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:10px;display:block}
+.sec-title{font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--dark);margin-bottom:16px}.sec-title span{color:var(--green)}
+.sec-sub{font-size:1rem;color:var(--gray);line-height:1.85}
+
+/* OVERVIEW */
+.overview{background:var(--off)}
+.ov-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ov-img{position:relative;border-radius:14px;overflow:hidden;height:480px}
+.ov-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.check-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.check-item{display:flex;align-items:flex-start;gap:14px}
+.check-item i{color:var(--green);font-size:1rem;margin-top:4px;flex-shrink:0}
+.check-item span{font-size:.95rem;color:#444;line-height:1.7}
+
+/* SERVICES GRID */
+.services-sec{background:#fff}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:28px;margin-top:50px}
+.srv-card{background:var(--off);border-radius:14px;overflow:hidden;box-shadow:var(--sh);transition:var(--tr)}
+.srv-card:hover{transform:translateY(-6px);box-shadow:var(--sh2)}
+.srv-img{height:200px;position:relative;overflow:hidden}
+.srv-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.srv-card:hover .srv-img img{transform:scale(1.06)}
+.srv-img-ph{position:absolute;inset:0;background:linear-gradient(135deg,var(--stone),#D8E8DA);display:flex;align-items:center;justify-content:center}
+.srv-img-ph i{font-size:3.5rem;color:var(--green);opacity:.4}
+.srv-body{padding:28px}
+.srv-icon{width:46px;height:46px;background:rgba(46,107,62,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--green);margin-bottom:14px}
+.srv-body h3{font-size:1.2rem;color:var(--dark);margin-bottom:10px}
+.srv-body p{font-size:.9rem;color:var(--gray);line-height:1.75}
+
+/* GALLERY - MASONRY STYLE */
+.gallery{background:var(--off)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,240px);gap:16px}
+.gal-item{border-radius:12px;overflow:hidden;position:relative}
+.gal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item.tall{grid-row:span 2}
+.gal-overlay{position:absolute;inset:0;background:rgba(46,107,62,0);transition:var(--tr)}
+.gal-item:hover .gal-overlay{background:rgba(46,107,62,.2)}
+
+/* WHY US */
+.why{background:var(--dark);padding:80px 30px}
+.why .sec-title{color:#fff}.why .sec-sub{color:rgba(255,255,255,.65)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:50px}
+.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:30px 24px;text-align:center;transition:var(--tr)}
+.why-card:hover{background:rgba(46,107,62,.12);border-color:rgba(46,107,62,.35);transform:translateY(-4px)}
+.why-card i{font-size:2rem;color:#7DC98A;margin-bottom:14px}
+.why-card h4{font-size:1rem;color:#fff;margin-bottom:8px}
+.why-card p{font-size:.87rem;color:rgba(255,255,255,.55);line-height:1.7}
+
+/* COMBO BANNER */
+.combo{background:linear-gradient(135deg,var(--green) 0%,#1B4A2A 100%);padding:70px 30px}
+.combo-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.combo-text h2{font-size:clamp(1.7rem,3vw,2.3rem);color:#fff;margin-bottom:14px}
+.combo-text p{color:rgba(255,255,255,.78);font-size:.98rem;line-height:1.8}
+.combo-list{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.combo-list li{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.85);font-size:.93rem}
+.combo-list li i{color:#7DC98A;font-size:.9rem}
+.combo-cta{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.combo-cta .price-note{font-size:.85rem;color:rgba(255,255,255,.55);margin-top:4px}
+
+/* PROCESS */
+.process{background:#fff}
+.proc-steps{display:flex;flex-direction:column;gap:0;margin-top:48px;max-width:760px}
+.proc-step{display:flex;gap:28px;align-items:flex-start;position:relative;padding-bottom:36px}
+.proc-step:last-child{padding-bottom:0}
+.proc-step::before{content:'';position:absolute;left:22px;top:50px;bottom:0;width:2px;background:linear-gradient(180deg,var(--green),rgba(46,107,62,.1));z-index:0}
+.proc-step:last-child::before{display:none}
+.step-num{width:46px;height:46px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;flex-shrink:0;z-index:1}
+.step-body h4{font-size:1.1rem;color:var(--dark);margin-bottom:8px}
+.step-body p{font-size:.92rem;color:var(--gray);line-height:1.75}
+
+/* FAQ */
+.faq{background:var(--off)}
+.faq-list{display:flex;flex-direction:column;gap:16px;margin-top:48px;max-width:820px}
+.faq-item{background:#fff;border-radius:10px;border-left:4px solid var(--green);overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1.05rem;color:var(--dark);font-weight:600;gap:16px}
+.faq-q i{color:var(--green);flex-shrink:0;transition:var(--tr)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 24px 20px;font-size:.92rem;color:var(--gray);line-height:1.8}
+.faq-item.open .faq-q i{transform:rotate(180deg)}.faq-item.open .faq-a{max-height:220px}
+
+/* CTA */
+.cta-sec{background:linear-gradient(135deg,var(--terra) 0%,#9A3E18 100%);padding:70px 30px;text-align:center}
+.cta-sec h2{font-size:clamp(1.7rem,3.5vw,2.5rem);color:#fff;margin-bottom:14px}
+.cta-sec p{color:rgba(255,255,255,.85);font-size:1rem;max-width:500px;margin:0 auto 30px}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--terra)}.btn-white:hover{background:var(--off);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+footer{background:#0D1520;padding:36px 30px 24px}
+.footer-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.35);text-align:center}
+.footer-links{display:flex;gap:24px}.footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);transition:var(--tr)}.footer-links a:hover{color:var(--terra)}
+
+.float-phone{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px;background:var(--terra);color:#fff;padding:13px 20px;border-radius:50px;box-shadow:0 8px 30px rgba(200,90,42,.5);font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1px;transition:var(--tr);animation:pulse 2.5s infinite}
+.float-phone:hover{background:var(--terra-l);transform:translateY(-3px)}
+@keyframes pulse{0%,100%{box-shadow:0 8px 30px rgba(200,90,42,.5)}50%{box-shadow:0 8px 40px rgba(200,90,42,.8)}}
+
+@media(max-width:900px){
+  .ov-grid,.combo-in{grid-template-columns:1fr}
+  .ov-img{height:300px}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gal-item.tall{grid-row:span 1;height:200px}
+  .gal-item{height:180px}
+  .nav-links{display:none;position:fixed;top:0;right:0;bottom:0;width:260px;background:var(--dark);flex-direction:column;align-items:flex-start;padding:90px 30px 40px;gap:8px;transform:translateX(100%);transition:transform .3s ease}
+  .nav-links.open{display:flex;transform:translateX(0)}
+  .nav-links li{width:100%}
+  .nav-links a{font-size:17px;padding:10px 0;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+  .burger{display:flex}
+}
+@media(max-width:600px){
+  .sec{padding:56px 20px}
+  .gal-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .gal-item,.gal-item.tall{height:200px}
+  .footer-in{flex-direction:column;align-items:center;text-align:center}
+  .float-phone{right:16px;bottom:16px}
+}
+</style>
+</head>
+<body>
+
+<a class="float-phone" href="tel:5619701917"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">West Palm Beach, FL</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-ov"></div>
+  <div class="page-hero-c">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i>
+      <a href="index.html#services">Services</a><i class="fas fa-chevron-right"></i>
+      <span style="color:#7DC98A">Landscaping</span>
+    </div>
+    <div class="page-badge"><i class="fas fa-leaf"></i> Landscaping</div>
+    <h1>Professional <span>Landscaping</span> Services</h1>
+    <p>Complete outdoor transformations for West Palm Beach homes and businesses. Sod, plants, mulch, garden design, and full yard makeovers — we make your property beautiful from edge to edge.</p>
+    <div class="hero-btns">
+      <a href="index.html#contact" class="btn btn-green"><i class="fas fa-file-alt"></i> Get a Free Estimate</a>
+      <a href="tel:5619701917" class="btn btn-outline"><i class="fas fa-phone-alt"></i> (561) 970-1917</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">10+</div><div class="lbl">Years Experience</div></div>
+      <div class="hero-stat"><div class="num">500+</div><div class="lbl">Yards Transformed</div></div>
+      <div class="hero-stat"><div class="num">100%</div><div class="lbl">Free Estimates</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview sec">
+  <div class="sec-in">
+    <div class="ov-grid">
+      <div class="ov-img" data-aos="fade-right">
+        <img src="images/landscape2.jpg" alt="Professional Landscaping West Palm Beach">
+      </div>
+      <div data-aos="fade-left">
+        <span class="sec-label">Full Outdoor Transformations</span>
+        <h2 class="sec-title">Your Yard, <span>Reimagined</span></h2>
+        <p class="sec-sub" style="margin-bottom:20px">A beautiful landscape doesn't just look good — it adds real value to your property, reduces heat, and gives you an outdoor space you're proud of. We combine pavers and landscaping to deliver complete, cohesive outdoor makeovers that no one else in Palm Beach County can match.</p>
+        <p class="sec-sub" style="margin-bottom:28px">Whether your yard needs a fresh start or just some polish, our landscaping crew handles everything from soil prep to the final cleanup.</p>
+        <div class="check-list">
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Sod & grass installation</strong> — St. Augustine, Zoysia, Bermuda — we recommend the right grass for your yard.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Plant & tree installation</strong> — native Florida plants, palms, shrubs, and flowering varieties.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Mulching & edging</strong> — clean, defined beds that make the whole yard look sharp.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Rock & stone features</strong> — decorative gravel, river rock, and boulder accents.</span></div>
+          <div class="check-item"><i class="fas fa-check-circle"></i><span><strong>Drainage solutions</strong> — French drains and grading to solve standing water problems.</span></div>
+        </div>
+        <a href="index.html#contact" class="btn btn-green"><i class="fas fa-file-alt"></i> Request a Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-sec sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">What We Offer</span>
+      <h2 class="sec-title">Our <span>Landscaping Services</span></h2>
+      <p class="sec-sub">From a single weekend project to a complete property transformation — we handle every aspect of your landscape.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-seedling"></i></div>
+          <img src="images/landscape3.jpg" alt="Sod Installation West Palm Beach">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Sod Installation</h3>
+          <p>A lush, green lawn installed fast. We prep the soil, grade properly, and lay fresh sod for instant results. St. Augustine, Zoysia, Bermuda — whatever fits your yard and sun exposure.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-tree"></i></div>
+          <img src="images/landscape4.jpg" alt="Planting and Trees">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-tree"></i></div>
+          <h3>Trees, Palms & Planting</h3>
+          <p>We install palms, shade trees, flowering shrubs, and native Florida plants that thrive in West Palm Beach's climate — adding beauty, privacy, and shade to your property.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-layer-group"></i></div>
+          <img src="images/landscape5.jpg" alt="Mulching and Edging">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Mulching & Bed Edging</h3>
+          <p>Fresh mulch and clean edges instantly transform the look of any yard. We install premium mulch in all garden beds and create sharp, defined borders that look professionally maintained.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-mountain"></i></div>
+          <img src="images/landscape1.jpg" alt="Rock and Stone Landscaping">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-mountain"></i></div>
+          <h3>Rock, Gravel & Stone</h3>
+          <p>Decorative gravel, river rock, lava rock, and boulder features that add texture and visual interest while reducing lawn maintenance and conserving water.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-water"></i></div>
+          <img src="images/landscape2.jpg" alt="Drainage Solutions">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-water"></i></div>
+          <h3>Drainage & Grading</h3>
+          <p>Standing water after Florida rains? We install French drains, catch basins, and regrade your yard to direct water away from your home and prevent erosion and flooding.</p>
+        </div>
+      </div>
+      <div class="srv-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="srv-img">
+          <div class="srv-img-ph"><i class="fas fa-pencil-ruler"></i></div>
+          <img src="images/landscape3.jpg" alt="Full Yard Makeover">
+        </div>
+        <div class="srv-body">
+          <div class="srv-icon"><i class="fas fa-pencil-ruler"></i></div>
+          <h3>Full Yard Makeovers</h3>
+          <p>Starting fresh? We design and build complete landscape transformations — clearing, grading, planting, mulching, and paver integration — all handled by one crew, one company.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-title">Landscaping <span>Project Gallery</span></h2>
+      <p class="sec-sub">A look at some of our recent landscaping projects across West Palm Beach and Palm Beach County.</p>
+    </div>
+    <div class="gal-grid" style="margin-top:40px">
+      <div class="gal-item tall" data-aos="fade-up">
+        <img src="images/landscape1.jpg" alt="Landscaping Project West Palm Beach">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="60">
+        <img src="images/landscape2.jpg" alt="Landscaping Project">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="80">
+        <img src="images/landscape3.jpg" alt="Landscaping Project">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/landscape4.jpg" alt="Landscaping Project">
+        <div class="gal-overlay"></div>
+      </div>
+      <div class="gal-item" data-aos="fade-up" data-aos-delay="120">
+        <img src="images/landscape5.jpg" alt="Landscaping Project">
+        <div class="gal-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMBO BANNER: PAVERS + LANDSCAPING -->
+<section class="combo">
+  <div class="combo-in">
+    <div class="combo-text" data-aos="fade-right">
+      <span style="display:block;font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px">Best Value</span>
+      <h2>Pavers + Landscaping <br>— One Crew, One Project</h2>
+      <p>The biggest advantage of working with Pavers Ordonez is that we handle both your hardscaping and landscaping. No coordinating between multiple contractors — we design everything together for a seamless, cohesive result.</p>
+      <ul class="combo-list">
+        <li><i class="fas fa-check"></i> Save money by bundling paver and landscape work</li>
+        <li><i class="fas fa-check"></i> One point of contact for your entire project</li>
+        <li><i class="fas fa-check"></i> Cohesive design — pavers and plants planned together</li>
+        <li><i class="fas fa-check"></i> Faster completion — no scheduling gaps between trades</li>
+      </ul>
+    </div>
+    <div class="combo-cta" data-aos="fade-left">
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:36px;width:100%">
+        <i class="fas fa-star" style="font-size:2rem;color:var(--amber-l);margin-bottom:16px;display:block"></i>
+        <h3 style="font-family:'Oswald',sans-serif;font-size:1.4rem;color:#fff;margin-bottom:12px">Ask About Our Combo Packages</h3>
+        <p style="font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:24px">Get your paver driveway, patio, or walkway installed at the same time as your landscape transformation — and save on both.</p>
+        <a href="tel:5619701917" class="btn btn-primary" style="width:100%;justify-content:center;font-size:14px">
+          <i class="fas fa-phone-alt"></i> Call (561) 970-1917
+        </a>
+        <a href="index.html#contact" class="btn" style="width:100%;justify-content:center;font-size:14px;margin-top:12px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2)">
+          <i class="fas fa-file-alt"></i> Request a Quote Online
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="sec-in">
+    <div data-aos="fade-up" style="text-align:center;margin-bottom:50px">
+      <span class="sec-label" style="color:rgba(125,201,138,.8)">Why Pavers Ordonez</span>
+      <h2 class="sec-title" style="color:#fff">Why Choose Us for <span style="color:#7DC98A">Landscaping?</span></h2>
+      <p class="sec-sub" style="margin:0 auto">We're not just another landscaping crew — we understand how hardscaping and landscaping work together to create exceptional outdoor spaces.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Local Florida Expertise</h4>
+        <p>We know which plants, grasses, and drainage solutions work in Palm Beach County's soil, heat, and rain patterns — and which ones fail.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="60">
+        <i class="fas fa-th"></i>
+        <h4>Pavers + Landscape in One</h4>
+        <p>We're unique in offering both hardscaping and landscaping — meaning your entire outdoor project gets designed and built as one cohesive vision.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="120">
+        <i class="fas fa-dollar-sign"></i>
+        <h4>Honest, Upfront Pricing</h4>
+        <p>We quote every job in detail before any work begins. No surprises, no scope creep — just the price we quoted and the result we promised.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="180">
+        <i class="fas fa-broom"></i>
+        <h4>Clean Work, Clean Property</h4>
+        <p>We haul away all debris, clean up every day, and leave your property looking better than when we arrived — even before the project is complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label" style="color:var(--green)">How It Works</span>
+      <h2 class="sec-title">Our <span>Landscaping Process</span></h2>
+    </div>
+    <div class="proc-steps" data-aos="fade-up">
+      <div class="proc-step">
+        <div class="step-num" style="background:var(--green)">1</div>
+        <div class="step-body">
+          <h4>Free On-Site Consultation</h4>
+          <p>We visit your property, walk through your yard with you, understand your vision and budget, and assess soil, drainage, and sun conditions to recommend the right plan.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num" style="background:var(--green)">2</div>
+        <div class="step-body">
+          <h4>Custom Landscape Plan & Quote</h4>
+          <p>We provide a detailed written estimate listing every plant, material, and service — no hidden add-ons. You approve everything before we start a single thing.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num" style="background:var(--green)">3</div>
+        <div class="step-body">
+          <h4>Site Prep & Clearing</h4>
+          <p>We remove old plants, debris, or existing grass as needed, grade the area for proper drainage, and prepare the soil for new planting and sod installation.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num" style="background:var(--green)">4</div>
+        <div class="step-body">
+          <h4>Installation</h4>
+          <p>Sod, plants, trees, mulch, rock, and edging are installed in a single organized process by our experienced landscape crew — working efficiently to minimize disruption.</p>
+        </div>
+      </div>
+      <div class="proc-step">
+        <div class="step-num" style="background:var(--green)">5</div>
+        <div class="step-body">
+          <h4>Final Walkthrough & Cleanup</h4>
+          <p>We walk the completed project with you, address any questions, and leave the property spotless. We also provide care tips so your new landscape thrives long-term.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec">
+  <div class="sec-in">
+    <div data-aos="fade-up">
+      <span class="sec-label" style="color:var(--green)">Common Questions</span>
+      <h2 class="sec-title">Landscaping <span>FAQ</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What type of grass do you recommend for West Palm Beach? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>St. Augustine (especially Floratam) is the most popular choice in Palm Beach County — it handles heat, humidity, and partial shade well. For full-sun areas with heavier traffic, Zoysia is an excellent alternative. We'll recommend the best option based on your yard's specific conditions.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can you fix my yard's drainage problem? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Yes. Standing water after rain is a common problem in South Florida. We assess the cause — whether it's poor grading, clay soil, or inadequate drainage — and install the right solution: French drains, catch basins, swales, or regrading. We fix the root cause, not just the symptoms.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you use native Florida plants? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Yes, and we recommend them whenever possible. Native Florida plants are adapted to local rainfall patterns, require less irrigation and fertilizer, and support local wildlife. They're also more resistant to pests and disease than non-native species. We'll suggest native options that fit your aesthetic goals.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can you do landscaping and pavers at the same time? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Absolutely — and we encourage it. Combining both projects saves time, money, and the headache of coordinating multiple contractors. We design pavers and landscaping to complement each other perfectly, and our crew handles everything in one organized process.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How much does landscaping cost in West Palm Beach? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a"><p>Landscaping costs vary widely depending on yard size, services needed, and materials chosen. We provide free, detailed written estimates for every project — contact us and we'll visit your property to give you an accurate quote at no charge.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-sec">
+  <div class="sec-in" data-aos="fade-up">
+    <h2>Ready to Transform Your Yard?</h2>
+    <p>Get a free landscaping estimate from West Palm Beach's trusted outdoor professionals. We respond within 24 hours.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn btn-white"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
+      <a href="tel:5619701917" class="btn btn-outline-white"><i class="fas fa-phone-alt"></i> Call (561) 970-1917</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon" style="width:34px;height:34px;font-size:15px"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">West Palm Beach, FL</span></div>
+    </a>
+    <p class="footer-copy">&copy; 2025 Pavers Ordonez. All rights reserved. | West Palm Beach, FL</p>
+    <div class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:5619701917">(561) 970-1917</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,offset:60});
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');}
+function toggleFaq(el){const item=el.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');}
+</script>
+</body>
+</html>
