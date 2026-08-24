@@ -216,6 +216,18 @@ a.srv-card{color:inherit}
 .btn-submit{width:100%;padding:16px;background:var(--terra);color:#fff;border:none;border-radius:6px;font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
 .btn-submit:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.35)}
 
+/* MAP */
+.map-section{margin-top:60px;padding-top:50px;border-top:1px solid rgba(255,255,255,.08)}
+.map-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:block}
+.map-title{font-size:1.4rem;color:#fff;margin-bottom:6px}
+.map-sub{font-size:.9rem;color:rgba(255,255,255,.5);margin-bottom:24px}
+.map-wrap{border-radius:14px;overflow:hidden;height:400px;border:1px solid rgba(255,255,255,.1);position:relative}
+.map-wrap iframe{width:100%;height:100%;border:none;filter:invert(92%) hue-rotate(180deg) saturate(.8) brightness(.9)}
+.map-cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.map-city{display:flex;align-items:center;gap:6px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.map-city i{color:var(--terra);font-size:.7rem}
+@media(max-width:600px){.map-wrap{height:260px}.map-section{margin-top:40px;padding-top:36px}}
+
 /* FOOTER */
 footer{background:#0D1520;padding:40px 30px 28px}
 .footer-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
@@ -665,6 +677,30 @@ footer{background:#0D1520;padding:40px 30px 28px}
         <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> &nbsp;Send My Request</button>
       </form>
     </div>
+
+    <!-- MAP -->
+    <div class="map-section" data-aos="fade-up">
+      <span class="map-label"><i class="fas fa-map-marker-alt"></i> &nbsp;Service Area</span>
+      <h3 class="map-title">We Serve <span style="color:var(--terra)">West Palm Beach</span> & Palm Beach County</h3>
+      <p class="map-sub">Serving homeowners and businesses across Palm Beach County — including Wellington, Boynton Beach, Delray Beach, Boca Raton, and surrounding areas.</p>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231415.08906!2d-80.35!3d26.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d8d6d2534a4049%3A0x1fe3f6cf98aacd72!2sWest%20Palm%20Beach%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="map-cities">
+        <span class="map-city"><i class="fas fa-circle"></i> West Palm Beach</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Wellington</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Boynton Beach</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Delray Beach</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Boca Raton</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Palm Beach Gardens</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Lake Worth</span>
+        <span class="map-city"><i class="fas fa-circle"></i> Greenacres</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
