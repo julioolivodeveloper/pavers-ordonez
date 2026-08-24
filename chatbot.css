@@ -1,6 +1,6 @@
 /* ── CHATBOT TOGGLE ── */
 #cb-toggle{
-  position:fixed;bottom:28px;left:28px;z-index:998;
+  position:fixed;bottom:28px;right:28px;z-index:998;
   display:flex;align-items:center;gap:10px;
   background:#C85A2A;color:#fff;
   padding:13px 20px;border-radius:50px;
@@ -23,7 +23,7 @@
 
 /* ── CHAT WINDOW ── */
 #cb-window{
-  position:fixed;bottom:90px;left:28px;z-index:997;
+  position:fixed;bottom:90px;right:28px;z-index:997;
   width:340px;max-height:520px;
   background:#fff;border-radius:18px;
   box-shadow:0 20px 60px rgba(0,0,0,.18);
@@ -97,6 +97,6 @@
 .cb-qr:hover{background:#C85A2A;color:#fff;border-color:#C85A2A}
 
 @media(max-width:400px){
-  #cb-window{width:calc(100vw - 24px);left:12px;bottom:80px}
-  #cb-toggle{left:16px;bottom:16px}
+  #cb-window{width:calc(100vw - 24px);right:12px;bottom:80px}
+  #cb-toggle{right:16px;bottom:16px}
 }
