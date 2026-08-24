@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="Paver and landscaping tips, guides, and project stories for West Palm Beach and Palm Beach County homeowners — by Pavers Ordonez.">
+<title>Blog | Pavers Ordonez — West Palm Beach, FL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#1A2332;--dark2:#243040;
+  --terra:#C85A2A;--terra-l:#E07040;
+  --amber:#F4A832;--amber-l:#F7BE62;
+  --white:#fff;--off:#FAF8F5;--stone:#F0EDE8;--gray:#6C757D;
+  --tr:all .3s ease;--sh:0 10px 40px rgba(0,0,0,.12);--sh2:0 20px 60px rgba(0,0,0,.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.7}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.15;letter-spacing:.5px}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+a[href^="tel"]:not(.btn),a[href^="sms"]:not(.btn){color:inherit}
+
+/* NAV */
+.nav{position:fixed;top:0;width:100%;z-index:1000;background:var(--dark);padding:14px 0;box-shadow:0 5px 30px rgba(0,0,0,.3)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:42px;height:42px;background:var(--terra);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;flex-shrink:0}
+.logo-b{font-family:'Oswald',sans-serif;font-size:17px;font-weight:700;color:#fff;letter-spacing:1px;line-height:1;display:block}
+.logo-t{font-size:10px;color:var(--amber-l);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.8);font-family:'Oswald',sans-serif;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr)}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--terra)!important;color:#fff!important;padding:9px 20px;border-radius:4px}
+.nav-cta:hover{background:var(--terra-l)!important}
+.nav-dropdown{position:relative}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px}
+.nav-dropdown>a .dd-arrow{font-size:.6rem;transition:transform .25s ease}
+.nav-dropdown:hover>a .dd-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%);background:#1C2E42;border-radius:10px;min-width:210px;box-shadow:0 15px 50px rgba(0,0,0,.45);opacity:0;visibility:hidden;transition:opacity .22s ease,visibility .22s ease,top .22s ease;border:1px solid rgba(255,255,255,.07);padding:8px 0;z-index:1001}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;top:calc(100% + 10px)}
+.dropdown-menu a{display:flex;align-items:center;gap:10px;padding:11px 18px;color:rgba(255,255,255,.78);font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;transition:var(--tr);white-space:nowrap}
+.dropdown-menu a:hover{color:#fff;background:rgba(200,90,42,.14);padding-left:22px}
+.dropdown-menu a i{color:var(--terra);font-size:.85rem;width:14px;flex-shrink:0}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{display:block;width:25px;height:2px;background:#fff;transition:var(--tr)}
+
+/* PAGE HERO */
+.page-hero{position:relative;padding:140px 30px 80px;overflow:hidden;min-height:400px;display:flex;align-items:center}
+.page-hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.38);opacity:0;transition:opacity 1.5s ease}
+.page-hero-slide.active{opacity:1}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,35,50,.9) 0%,rgba(200,90,42,.15) 100%)}
+.page-hero-c{position:relative;max-width:1200px;margin:0 auto;width:100%}
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:18px;font-size:.8rem;color:rgba(255,255,255,.5);font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:var(--tr)}.breadcrumb a:hover{color:var(--terra)}.breadcrumb i{font-size:.6rem}
+.page-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,90,42,.15);border:1px solid var(--terra);color:var(--amber-l);padding:7px 16px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.page-hero h1{font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;margin-bottom:14px}
+.page-hero h1 span{color:var(--terra)}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.75);max-width:560px}
+
+/* BLOG GRID */
+.blog-sec{padding:80px 30px;background:var(--off)}
+.blog-in{max-width:1200px;margin:0 auto}
+.sec-label{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px;display:block}
+.sec-title{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--dark);margin-bottom:14px}
+.sec-title span{color:var(--terra)}
+.sec-sub{font-size:1rem;color:var(--gray);line-height:1.85;max-width:600px;margin-bottom:50px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.blog-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--sh);transition:var(--tr);display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-5px);box-shadow:var(--sh2)}
+.blog-img{height:220px;position:relative;overflow:hidden}
+.blog-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.blog-card:hover .blog-img img{transform:scale(1.06)}
+.blog-cat{position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:20px;font-family:'Oswald',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;z-index:2}
+.cat-tips{background:var(--amber);color:var(--dark)}
+.cat-design{background:#2E7D9C;color:#fff}
+.cat-pool{background:#1565C0;color:#fff}
+.cat-maint{background:#5A6878;color:#fff}
+.cat-project{background:#2E7D44;color:#fff}
+.cat-pricing{background:var(--dark);color:#fff}
+.cat-land{background:#388E3C;color:#fff}
+.cat-repair{background:var(--terra);color:#fff}
+.blog-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.blog-meta{display:flex;align-items:center;gap:14px;font-size:.75rem;color:var(--gray);margin-bottom:10px;font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.blog-meta i{color:var(--terra);font-size:.7rem}
+.blog-body h3{font-size:1.05rem;color:var(--dark);margin-bottom:10px;line-height:1.3;flex:1}
+.blog-body h3 a{color:inherit;transition:var(--tr)}
+.blog-body h3 a:hover{color:var(--terra)}
+.blog-excerpt{font-size:.85rem;color:var(--gray);line-height:1.75;margin-bottom:16px}
+.blog-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--stone);margin-top:auto}
+.blog-author{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--gray)}
+.blog-author-av{width:28px;height:28px;background:var(--terra);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-family:'Oswald',sans-serif;font-weight:700;flex-shrink:0}
+.btn-read{font-family:'Oswald',sans-serif;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);display:flex;align-items:center;gap:6px;transition:var(--tr);font-weight:600}
+.btn-read i{font-size:.65rem;transition:var(--tr)}
+.btn-read:hover{color:var(--terra-l)}.btn-read:hover i{transform:translateX(3px)}
+
+/* CTA */
+.cta-sec{background:linear-gradient(135deg,var(--terra) 0%,#9A3E18 100%);padding:70px 30px;text-align:center}
+.cta-sec h2{font-size:clamp(1.7rem,3.5vw,2.5rem);color:#fff;margin-bottom:14px}
+.cta-sec p{color:rgba(255,255,255,.85);font-size:1rem;max-width:500px;margin:0 auto 30px}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:4px;font-family:'Oswald',sans-serif;font-size:15px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none}
+.btn-white{background:#fff;color:var(--terra)}.btn-white:hover{background:var(--off);transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,.2)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#0D1520;padding:36px 30px 24px}
+.footer-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.35);text-align:center}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);transition:var(--tr)}.footer-links a:hover{color:var(--terra)}
+
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-links{display:none;position:fixed;top:0;right:0;bottom:0;width:280px;background:var(--dark);flex-direction:column;align-items:flex-start;padding:90px 36px 40px;gap:8px;transform:translateX(100%);transition:transform .3s ease;box-shadow:-10px 0 40px rgba(0,0,0,.4)}
+  .nav-links.open{display:flex;transform:translateX(0)}
+  .nav-links li{width:100%}
+  .nav-links a{font-size:17px;padding:10px 0;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+  .burger{display:flex}
+}
+@media(max-width:600px){
+  .blog-grid{grid-template-columns:1fr}
+  .blog-sec{padding:56px 20px}
+  .page-hero{padding:100px 20px 56px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">West Palm Beach, FL</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-dropdown">
+        <a href="index.html#services">Services <i class="fas fa-chevron-down dd-arrow"></i></a>
+        <div class="dropdown-menu">
+          <a href="driveway.html"><i class="fas fa-car"></i> Driveway Pavers</a>
+          <a href="patio.html"><i class="fas fa-umbrella-beach"></i> Patio &amp; Outdoor Living</a>
+          <a href="walkway.html"><i class="fas fa-walking"></i> Walkways &amp; Paths</a>
+          <a href="repair.html"><i class="fas fa-tools"></i> Paver Repair</a>
+          <a href="landscaping.html"><i class="fas fa-leaf"></i> Landscaping</a>
+        </div>
+      </li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html" style="color:#fff">Blog</a></li>
+      <li><a href="index.html#testimonials">Reviews</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <div class="burger" id="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-slide active" style="background-image:url('images/740779585_122105196915381595_5573765595533482193_n.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/landscape1.jpg')"></div>
+  <div class="page-hero-slide" style="background-image:url('images/738582917_122104743741381595_9048891896374228902_n.jpg')"></div>
+  <div class="page-hero-ov"></div>
+  <div class="page-hero-c">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span style="color:var(--terra)">Blog</span></div>
+    <div class="page-badge"><i class="fas fa-newspaper"></i> Expert Tips &amp; Guides</div>
+    <h1>Paver &amp; Landscaping <span>Blog</span></h1>
+    <p>Expert advice, project stories, and local tips for homeowners in West Palm Beach and Palm Beach County.</p>
+  </div>
+</section>
+
+<section class="blog-sec">
+  <div class="blog-in">
+    <div data-aos="fade-up">
+      <span class="sec-label">Latest Articles</span>
+      <h2 class="sec-title">Tips &amp; <span>Stories</span> From Our Team</h2>
+      <p class="sec-sub">10 articles to help you make smart decisions about pavers, landscaping, and outdoor living in South Florida.</p>
+    </div>
+    <div class="blog-grid">
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img">
+          <span class="blog-cat cat-tips">Tips &amp; Advice</span>
+          <img src="images/739615970_122104736421381595_5079593418420738257_n.jpg" alt="How to Choose Pavers">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> July 15, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 5 min read</div>
+          <h3><a href="blog-1.html">How to Choose the Right Pavers for Your Driveway in West Palm Beach</a></h3>
+          <p class="blog-excerpt">Not all pavers are created equal. Learn which material works best in Florida's heat, humidity, and heavy rain — and which one will last the longest on your property.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-1.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="blog-img">
+          <span class="blog-cat cat-design">Design</span>
+          <img src="images/738593739_122105201601381595_2393415177006706088_n.jpg" alt="Paver Walkway Designs">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> July 8, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 4 min read</div>
+          <h3><a href="blog-2.html">5 Paver Walkway Designs That Instantly Boost Curb Appeal</a></h3>
+          <p class="blog-excerpt">Your front walkway is the first thing visitors see. Discover the five most popular paver designs that Palm Beach County homeowners are using to transform their entryways.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-2.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="blog-img">
+          <span class="blog-cat cat-pool">Pool &amp; Outdoor</span>
+          <img src="images/738593643_122133723075138249_4202044277146498242_n.jpg" alt="Travertine Pool Deck">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> June 28, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 4 min read</div>
+          <h3><a href="blog-3.html">Travertine Pavers: The Perfect Choice for Florida Pool Decks</a></h3>
+          <p class="blog-excerpt">Travertine stays cool underfoot, resists slipping when wet, and looks stunning around pools. Here's why it's become the top choice across Palm Beach County.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-3.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img">
+          <span class="blog-cat cat-maint">Maintenance</span>
+          <img src="images/740128675_122105238327381595_3256256444920625736_n.jpg" alt="Paver Maintenance">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> June 18, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 6 min read</div>
+          <h3><a href="blog-4.html">The Essential Paver Maintenance Guide for South Florida Homeowners</a></h3>
+          <p class="blog-excerpt">Florida's climate is tough on outdoor surfaces. Follow this maintenance checklist to keep your pavers looking brand new for years — and protect your investment.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-4.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="blog-img">
+          <span class="blog-cat cat-project">Project Spotlight</span>
+          <img src="images/739355702_122104726851381595_6501631938064703112_n.jpg" alt="Boynton Beach Backyard">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> June 5, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 3 min read</div>
+          <h3><a href="blog-5.html">Project Spotlight: Backyard Patio Transformation in Boynton Beach</a></h3>
+          <p class="blog-excerpt">See how we turned a cracked concrete backyard into a stunning 1,200 sq ft outdoor living space with tumbled brick pavers, a fire pit, and built-in seating.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-5.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="blog-img">
+          <span class="blog-cat cat-pricing">Pricing Guide</span>
+          <img src="images/738582917_122104743741381595_9048891896374228902_n.jpg" alt="Paver Driveway Cost">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> May 22, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 7 min read</div>
+          <h3><a href="blog-6.html">How Much Does a Paver Driveway Cost in West Palm Beach? (2025)</a></h3>
+          <p class="blog-excerpt">Thinking about a new paver driveway? Get honest, up-to-date pricing for materials and installation in the West Palm Beach area — no surprises, just real numbers.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-6.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img">
+          <span class="blog-cat cat-land">Landscaping</span>
+          <img src="images/landscape2.jpg" alt="Landscaping Trends">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> May 10, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 5 min read</div>
+          <h3><a href="blog-7.html">Top Landscaping Trends Transforming Palm Beach County Homes in 2025</a></h3>
+          <p class="blog-excerpt">From drought-resistant native plants to paver-integrated garden designs, discover the landscaping trends that homeowners and designers are loving this year.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-7.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="blog-img">
+          <span class="blog-cat cat-repair">Repair</span>
+          <img src="images/738653811_122105114475381595_1422124647662833511_n.jpg" alt="Paver Repair vs Replacement">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> April 25, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 5 min read</div>
+          <h3><a href="blog-8.html">Paver Repair vs. Full Replacement: What to Choose and When</a></h3>
+          <p class="blog-excerpt">Cracked, sunken, or stained pavers don't always mean you need a full replacement. Learn how to assess the damage and make the most cost-effective decision.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-8.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="blog-img">
+          <span class="blog-cat cat-design">Design</span>
+          <img src="images/740259718_122105197755381595_3756253496081007450_n.jpg" alt="Paver Patterns">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> April 10, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 4 min read</div>
+          <h3><a href="blog-9.html">The Best Paver Patterns for Driveways and Patios in West Palm Beach</a></h3>
+          <p class="blog-excerpt">Herringbone? Running bond? Basket weave? The pattern you choose affects both the look and the structural strength of your installation. Here's how to decide.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-9.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img">
+          <span class="blog-cat cat-tips">Tips &amp; Advice</span>
+          <img src="images/737645859_122104787787381595_8826169394889894895_n.jpg" alt="Hire a Paver Contractor">
+        </div>
+        <div class="blog-body">
+          <div class="blog-meta"><i class="fas fa-calendar-alt"></i> March 28, 2025 &nbsp;·&nbsp; <i class="fas fa-clock"></i> 5 min read</div>
+          <h3><a href="blog-10.html">7 Questions to Ask Before Hiring a Paver Contractor in West Palm Beach</a></h3>
+          <p class="blog-excerpt">Don't hire the first contractor who gives you a quote. Ask these 7 essential questions to separate the professionals from the fly-by-night operations.</p>
+          <div class="blog-footer">
+            <div class="blog-author"><div class="blog-author-av">PO</div> Pavers Ordonez Team</div>
+            <a href="blog-10.html" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-sec">
+  <div style="max-width:1200px;margin:0 auto" data-aos="fade-up">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Get a free, no-obligation estimate from Palm Beach County's trusted paver experts.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn btn-white"><i class="fas fa-file-alt"></i> Get a Free Quote</a>
+      <a href="tel:5619701917" class="btn btn-outline-white"><i class="fas fa-phone-alt"></i> Call (561) 970-1917</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-in">
+    <a href="index.html" class="logo">
+      <div class="logo-icon" style="width:34px;height:34px;font-size:15px"><i class="fas fa-th"></i></div>
+      <div><span class="logo-b">PAVERS ORDONEZ</span><span class="logo-t">West Palm Beach, FL</span></div>
+    </a>
+    <p class="footer-copy">&copy; 2025 Pavers Ordonez. All rights reserved. | Palm Beach County, FL</p>
+    <div class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,offset:60});
+document.querySelectorAll(".nav-dropdown>a").forEach(function(a){a.addEventListener("click",function(e){if(window.innerWidth<=900){e.preventDefault();var m=this.nextElementSibling;var o=m.style.opacity==="1";document.querySelectorAll(".dropdown-menu").forEach(function(x){x.style.opacity="0";x.style.visibility="hidden"});if(!o){m.style.opacity="1";m.style.visibility="visible";m.style.top="calc(100% + 10px)"}}})});
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open');document.getElementById('burger').classList.toggle('open')}
+(function(){var s=document.querySelectorAll('.page-hero-slide');if(s.length<2)return;var c=0;setInterval(function(){s[c].classList.remove('active');c=(c+1)%s.length;s[c].classList.add('active');},5000)})();
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>
