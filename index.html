@@ -116,6 +116,16 @@ a{text-decoration:none}
 .srv-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--terra);font-family:'Oswald',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:var(--tr)}
 .srv-card:hover .srv-link{gap:12px}
 a.srv-card{color:inherit}
+/* Wide landscaping card */
+.srv-card-wide{grid-column:1/-1;display:grid;grid-template-columns:420px 1fr}
+.srv-card-wide .srv-img{height:100%;min-height:220px}
+.srv-card-wide .srv-body{display:flex;flex-direction:column;justify-content:center;padding:36px 40px}
+.srv-card-wide .srv-body h3{font-size:1.6rem}
+.srv-card-wide .srv-body p{font-size:.97rem;max-width:600px}
+.srv-card-wide .srv-link{color:#2E7D44}
+.srv-card-wide .srv-icon{background:rgba(46,125,68,.1)}
+.srv-card-wide .srv-icon i{color:#2E7D44}
+@media(max-width:700px){.srv-card-wide{grid-template-columns:1fr}.srv-card-wide .srv-img{height:200px}}
 
 /* WHY US */
 .why{background:#fff}
@@ -373,7 +383,7 @@ footer{background:#0D1520;padding:40px 30px 28px}
           <span class="srv-link">Learn More <i class="fas fa-arrow-right"></i></span>
         </div>
       </a>
-      <a href="landscaping.html" class="srv-card" data-aos="fade-up" data-aos-delay="320">
+      <a href="landscaping.html" class="srv-card srv-card-wide" data-aos="fade-up" data-aos-delay="320">
         <div class="srv-img">
           <div class="srv-img-ph"><i class="fas fa-leaf"></i></div>
           <img src="images/landscape1.jpg" alt="Landscaping West Palm Beach">
