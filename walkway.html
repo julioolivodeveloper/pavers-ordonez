@@ -16,7 +16,7 @@
 :root{--dark:#1A2332;--dark2:#243040;--terra:#C85A2A;--terra-l:#E07040;--amber:#F4A832;--amber-l:#F7BE62;--white:#fff;--off:#FAF8F5;--stone:#F0EDE8;--gray:#6C757D;--tr:all .3s ease;--sh:0 10px 40px rgba(0,0,0,.12);--sh2:0 20px 60px rgba(0,0,0,.2);}
 html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;line-height:1.7}
 h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.15;letter-spacing:.5px}img{max-width:100%;display:block}a{text-decoration:none}
-a[href^="tel"],a[href^="sms"]{color:inherit}
+a[href^="tel"]:not(.btn),a[href^="sms"]:not(.btn){color:inherit}
 .nav{position:fixed;top:0;width:100%;z-index:1000;background:var(--dark);padding:14px 0;box-shadow:0 5px 30px rgba(0,0,0,.3)}
 .nav-in{max-width:1200px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:12px}
