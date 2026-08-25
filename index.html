@@ -203,7 +203,8 @@ a.srv-card{color:inherit}
 .contact{background:var(--dark);padding:90px 30px}
 .contact .sec-title{color:#fff}
 .contact .sec-sub{color:rgba(255,255,255,.6)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:50px;align-items:start}
+.contact-cta-wrap{margin-top:50px}
+.contact-info-row{display:flex;flex-wrap:wrap;gap:28px 48px;margin-bottom:44px}
 .contact-info{display:flex;flex-direction:column;gap:28px}
 .c-item{display:flex;gap:18px;align-items:flex-start}
 .c-icon{width:50px;height:50px;border-radius:10px;background:rgba(200,90,42,.15);border:1px solid rgba(200,90,42,.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--terra);flex-shrink:0}
@@ -211,15 +212,13 @@ a.srv-card{color:inherit}
 .c-val{font-family:'Oswald',sans-serif;font-size:1.15rem;color:#fff}
 .c-val a{color:var(--terra-l);transition:var(--tr)}
 .c-val a:hover{color:var(--amber-l)}
-.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:36px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{margin-bottom:20px}
-.form-group label{display:block;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:8px}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:13px 16px;color:#fff;font-family:'Open Sans',sans-serif;font-size:.95rem;outline:none;transition:var(--tr)}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.3)}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--terra);background:rgba(200,90,42,.06)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-group select option{background:var(--dark);color:#fff}
+.contact-btns-row{display:flex;flex-direction:column;gap:18px;max-width:620px}
+.contact-btn{display:flex;align-items:center;gap:22px;padding:24px 32px;border-radius:14px;text-decoration:none;transition:var(--tr);border:2px solid transparent}
+.contact-btn i{font-size:2.2rem;flex-shrink:0}
+.cb-title{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:.5px;margin-bottom:4px}
+.cb-sub{font-size:.85rem;opacity:.8}
+.contact-btn-wa{background:#25D366;color:#fff}.contact-btn-wa:hover{background:#1EAA53;transform:translateY(-3px);box-shadow:0 12px 40px rgba(37,211,102,.35)}
+.contact-btn-call{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.15)}.contact-btn-call:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);transform:translateY(-3px)}
 .btn-submit{width:100%;padding:16px;background:var(--terra);color:#fff;border:none;border-radius:6px;font-family:'Oswald',sans-serif;font-size:17px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:var(--tr)}
 .btn-submit:hover{background:var(--terra-l);transform:translateY(-2px);box-shadow:0 8px 25px rgba(200,90,42,.35)}
 
@@ -253,11 +252,10 @@ footer{background:#0D1520;padding:40px 30px 28px}
   .nav-links a{font-size:18px;padding:10px 0;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
   .nav-cta{margin-top:16px;text-align:center}
   .burger{display:flex}
-  .why-grid,.contact-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}.contact-info-row{flex-direction:column;gap:20px}
   .why-img{min-height:320px}
   .gal-slide{height:320px}
   .proc-grid::before{display:none}
-  .form-row{grid-template-columns:1fr}
 }
 @media(max-width:600px){
   .sec{padding:60px 20px}
@@ -726,10 +724,10 @@ footer{background:#0D1520;padding:40px 30px 28px}
     <div data-aos="fade-up">
       <span class="sec-label">Get In Touch</span>
       <h2 class="sec-title">Request a <span>Free Quote</span></h2>
-      <p class="sec-sub">Fill out the form or call us directly. We'll get back to you within 24 hours with a detailed estimate.</p>
+      <p class="sec-sub">Contact us via WhatsApp or phone — we respond fast and get you a detailed estimate within 24 hours.</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info" data-aos="fade-right">
+    <div class="contact-cta-wrap" data-aos="fade-up">
+      <div class="contact-info-row">
         <div class="c-item">
           <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
           <div>
@@ -759,45 +757,22 @@ footer{background:#0D1520;padding:40px 30px 28px}
           </div>
         </div>
       </div>
-      <form class="contact-form" data-aos="fade-left" onsubmit="handleForm(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" placeholder="John" required>
+      <div class="contact-btns-row">
+        <a href="https://wa.me/15619701917?text=Hi%2C%20I%27d%20like%20a%20free%20quote%20for%20paver%20work%20at%20my%20property%20in%20West%20Palm%20Beach." class="contact-btn contact-btn-wa" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <div class="cb-title">Message Us on WhatsApp</div>
+            <div class="cb-sub">Fastest response — reply within minutes</div>
           </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Smith" required>
+        </a>
+        <a href="tel:5619701917" class="contact-btn contact-btn-call">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <div class="cb-title">Call Us Directly</div>
+            <div class="cb-sub">(561) 970-1917 &nbsp;·&nbsp; Mon–Sat 7am–6pm</div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" placeholder="(561) 000-0000" required>
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="john@email.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Service Needed</label>
-          <select required>
-            <option value="" disabled selected>Select a service...</option>
-            <option>Driveway Pavers</option>
-            <option>Patio Pavers</option>
-            <option>Walkway / Path</option>
-            <option>Paver Repair & Restoration</option>
-            <option>Pool Deck Pavers</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Project Details</label>
-          <textarea placeholder="Describe your project, approximate size, and any specific requirements..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> &nbsp;Send My Request</button>
-      </form>
+        </a>
+      </div>
     </div>
 
     <!-- MAP -->
